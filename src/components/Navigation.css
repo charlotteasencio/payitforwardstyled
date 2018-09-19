@@ -1,101 +1,16 @@
-.navbar {
-  /* margin-bottom: 30px; */
+.accordion {
   font-family: 'Fredoka One', cursive;
   font-size: 17px;
-  border-bottom: 4px solid #ffc107;
+
 }
 
-.navigationA:hover {
-  text-decoration: none;
-  color: white;
-}
-
-.navigationAHome{
-  color: black
-}
-
-.navigationAHome:hover{
-  text-decoration: none;
+.fa-chevron-circle-down{
+  padding-right: 15px;
+  font-size: 25px;
   color: gray;
 }
 
-.navbar-nav {
-  display: right;
-}
-
-.home {
-  padding-top: 23px;
-  padding-left: 200px;
-}
-
-.volunteerbtn {
-  padding-top: 0px;
-  padding-bottom: 40px;
-  margin-bottom: 15px;
-  margin-left: 20px;
-}
-
-.orgbtn {
-  padding-top:0px;
-  padding-bottom: 40px;
-  margin-bottom: 15px;
-  margin-left: 20px;
-}
-
-.signoutbtn{
-  height: 30px;
-  padding-top:0px;
-  padding-bottom: 40px;
-  margin-bottom: 15px;
-  margin-left: 20px;
-}
-
-.logo {
-  height: 40px;
-  width: 40px;
-  margin-right: 10px;
-}
-
-.navigationA {
+.section-title {
   color: black;
-}
-
-.name {
-  font-size: 25px;
-}
-
-#profilebtn{
-  margin-right: 10px;
-  background: #99b83c;
-}
-
-#accountbtn{
-  background:#4a8ef9;
-}
-
-.navbtn {
-  display: inline;
-  /* padding-bottom: 30px; */
-}
-
-.signoutbtn {
-  height: 30px;
-  padding-top: 4px;
-  margin-left: 10px;
-}
-
-#homesignin {
-  /* margin-top: 10px;
-  padding-top: 0px;
-  margin-right: 10px; */
   font-size: 18px;
-}
-
-#homenosignin{
-  padding-top: 0px;
-  font-size: 20px;
-}
-
-.account {
-  margin-right: 10px;
 }

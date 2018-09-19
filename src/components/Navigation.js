@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 import AuthUserContext from './AuthUserContext';
 import SignOutButton from './SignOut';
 import * as routes from '../constants/routes';
-
-import "./Navigation.css"
-import payItForwardNoWords from "./payItForwardNoWords.png";
+import "./Navigation.css";
 
 const Navigation = () =>
   <AuthUserContext.Consumer>
@@ -18,44 +16,22 @@ const Navigation = () =>
 
 const NavigationAuth = () =>
 <div>
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <img className= "logo" src= { payItForwardNoWords } alt="logo"/>
-    <a className="navbar-brand name navigationA" href="/">Pay it Forward</a>
-    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav ml-auto">
-        <li className="nav-link" id="homesignin">
-        <Link to={routes.LANDING} className="navigationAHome">Home</Link>
-        </li>
-      </ul>
-        <button type="button" className="btn navbar-btn navbtn" id="profilebtn">
-        <Link to={routes.HOME} className="navigationA">Profile</Link></button>
-        <button type="button" className="btn btn-primary navbar-btn navbtn account" id="accountbtn">
-        <Link to={routes.ACCOUNT} className="navigationA">Account</Link></button>
-        <SignOutButton className="signoutbtn"/>
-
-    </div>
-  </nav>
+<nav className="navbar-fixed-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 sticky-top navbar">
+    <Link className="link" to={routes.LANDING}>Landing</Link>
+    <Link className="link" to={routes.HOME}>Home</Link>
+    <Link className="link" to={routes.ACCOUNT}>Account</Link>
+    <SignOutButton />
+</nav>
 </div>
 
-
 const NavigationNonAuth = () =>
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <img className= "logo" src= { payItForwardNoWords } alt="logo"/>
-    <a className="navbar-brand name" href="/">Pay it Forward</a>
-    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav ml-auto">
-        <li className="nav-link" id="homesignin"><Link to={routes.LANDING} className="navigationAHome">Home</Link></li>
-        <button type="button" className="btn btn-success navbar-btn navbtn" id="profilebtn"><li><Link to={routes.SIGN_IN} className="navigationA">Volunteer Sign In</Link></li></button>
-        <button type="button" className="btn btn-primary navbtn"> <li><Link to={routes.ORG_SIGN_IN} className="navigationA">Organization Sign In</Link></li></button>
-      </ul>
-    </div>
-  </nav>
+<div>
+<nav className="className=navbar-fixed-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 sticky-top navbar">
+    <Link className="link" to={routes.LANDING}>Landing</Link>
+    <Link className="link" to={routes.SIGN_IN}>Volunteer Sign In</Link>
+    <Link className="link" to={routes.ORG_SIGN_IN}>Organization Sign In</Link>
+</nav>
+</div>
 
 
 export default Navigation;

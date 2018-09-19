@@ -3,16 +3,14 @@
     font-size: 17px;
   
 }
+
 .fa-chevron-circle-down{
     padding-right: 15px;
     font-size: 25px;
-    color: #99b83c;
+    color: gray;
 }
+
 .section-title {
     color: black;
     font-size: 18px;
-}
-
-.card-body{
-    font-family: 'Poppins', sans-serif;
 }

@@ -1,25 +1,76 @@
-.jumbotron{
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
-    background-image: url("https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-    background-size: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 100%; 
+/*.parallax {
+    background: url("./images/trianglebackgroundlightgray.png");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+  }*/
+  
+  h2{
+    font-family: 'Raleway:900', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
     color: white;
-    opacity: 0.9;
-    color: white  
-}
-.my-4{
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 1px;
-}
+    padding-top: 100px;
+  }
+
+  h4{
+    font-family: 'Raleway:500', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .opener h5{
+    color: white;;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    padding-bottom: 60px;
+  }
+
+  p{ 
+    line-height: 50px;
+  }
+
+  .cd-fixed-bg {  
+    min-height: 50vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .cd-fixed-bg.cd-fixed-bg--1 {
+    background-image: url("./images/trianglebackgroundlightgray.png");
+  }
+  
+  .cd-scrolling-bg {
+    min-height: 100%;
+  }
+
+  .cd-scrolling-bg.cd-scrolling-bg--color-2 {
+    background-color: white;
+    color: gray;
+    opacity: .8;
+  }
+
+  .cd-scrolling-bg__content {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-top: -20px;
+  }
+
+  .cd-fixed-bg.cd-fixed-bg--2 {
+    background-image: url("./images/trianglebackgroundlightgray.png");
+  }
+
+  .cd-fixed-bg.cd-fixed-bg--3 {
+    background-image: url("./images/trianglebackgroundlightgray.png");
+  }

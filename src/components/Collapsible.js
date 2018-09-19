@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./Collapsible.css"
+import "./Collapsible.css";
 
 
 export class Collapsible extends Component {
@@ -71,6 +71,34 @@ Q: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin libero lacus, 
 
 A: Nullam eu metus leo. Donec metus magna, vulputate vitae sodales vulputate, tincidunt at turpis. Sed maximus suscipit urna eget viverra. Sed vitae consequat velit. Ut vestibulum odio sagittis ipsum venenatis consectetur. Donec sed tempus est.
 
+                        </div>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="card-header" id="headingFour">
+                        <h5 className="mb-0">
+                            <button onClick={this.handleCollapsible} className="btn btn-link collapsed section-title" type="button" data-toggle={collapseState}  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fas fa-chevron-circle-down"></i>
+                                Connect with Us
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" className={collapseState} aria-labelledby="headingFour" data-parent="#accordionExample">
+                        <div className="card-body">
+                        <form action="https://formspree.io/charlotte.e.asencio@gmail.com" method="POST">
+                      <div class="form-group">
+                        <label for="name-input">Name</label>
+                        <input class="form-control" id="name-input" type="text" name="name"></input>
+                      </div>
+                      <div class="form-group">
+                          <label for="email-input">Email</label>
+                          <input class="form-control" id="email-input" type="email" name="_replyto"></input>
+                      </div>
+                      <div class="form-group">
+                          <label for="comment-input">Message</label>
+                          <textarea class="form-control" id="comment-input" rows="5" name="message"></textarea>
+                      </div>
+                          <input class="btn btn-default" id="add-user" type="submit" value="Send"></input>
+                    </form>
                         </div>
                     </div>
                 </div>
