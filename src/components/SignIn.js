@@ -72,13 +72,12 @@ class SignInForm extends Component {
       email === '';
 
     return (
-      <div className="card container volunteer-login">
+      <div>
 
         <h1 className="volheader">Volunteer Sign In</h1>
         <p className="volheader">Please sign in to your volunteer user account.</p>
-      <hr/>
-
-      <div className="card-body volunteer-card-body">
+        
+      <div>
       <form onSubmit={this.onSubmit}>
       <div className="row">
       <div className="col-sm-12">

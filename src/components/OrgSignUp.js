@@ -117,7 +117,7 @@ class OrgSignUpForm extends Component {
             displayName === '';
 
         return (
-        <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <div>
             <form onSubmit={this.onSubmit}>
             <div className="row">
             <div className="col-sm-12">

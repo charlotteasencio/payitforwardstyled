@@ -16,21 +16,23 @@ const Navigation = () =>
 
 const NavigationAuth = () =>
 <div>
-<nav className="navbar-fixed-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 sticky-top navbar">
-    <Link className="link" to={routes.LANDING}>Landing</Link>
-    <Link className="link" to={routes.HOME}>Home</Link>
-    <Link className="link" to={routes.ACCOUNT}>Account</Link>
-    <SignOutButton />
-</nav>
+  <nav className = "navbarAuthVol navbar-expand-sm fixed-top navbar-light">
+     <div><Link className="link" to={routes.LANDING}>Home</Link></div>
+     <div><Link className="link" to={routes.HOME}>Profile</Link></div>
+     <div><Link className="link" to={routes.ACCOUNT}>Account</Link></div>
+     <div className="signOut"><SignOutButton /></div>
+  </nav>
 </div>
 
 const NavigationNonAuth = () =>
 <div>
-<nav className="className=navbar-fixed-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 sticky-top navbar">
-    <Link className="link" to={routes.LANDING}>Landing</Link>
-    <Link className="link" to={routes.SIGN_IN}>Volunteer Sign In</Link>
-    <Link className="link" to={routes.ORG_SIGN_IN}>Organization Sign In</Link>
-</nav>
+    <nav className = "navbarNonAuth navbar-expand-sm fixed-top navbar-light">
+          <Link className="link" to={routes.LANDING}>Home</Link>
+          <div className = "rightSide">
+            <Link to={routes.SIGN_IN}>Volunteer Sign In</Link>
+            <Link to={routes.ORG_SIGN_IN}>Organization Sign In</Link>
+        </div>
+    </nav>
 </div>
 
 

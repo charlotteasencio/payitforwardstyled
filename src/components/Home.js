@@ -67,51 +67,9 @@ class HomePage extends Component {
         </div>
         
         <div class="container">
-          <div class="centered text-center">
-            <div class="card ">
-              <div class="card-header">
-                <ul
-                  class="nav nav-tabs card-header-tabs pull-right"
-                  id="myTab"
-                  role="tablist">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      id="AllOpportunities-tab"
-                      data-toggle="tab"
-                      href="#AllOpportunities"
-                      role="tab"
-                      aria-controls="AllOpportunities"
-                      aria-selected="false">
-                      <Link to={routes.VIEW_OPPS} className="allOpps">All Opportunities</Link>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link active"
-                      id="MyOpportunities-tab"
-                      data-toggle="tab"
-                      href="#MyOpportunities"
-                      role="tab"
-                      aria-controls="profile"
-                      aria-selected="true">
-                      My Opportunities
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <div class="tab-content" id="myTabContent">
-                  <div
-                    class="tab-pane fade show active"
-                    id="MyOpportunities"
-                    role="tabpanel"
-                    aria-labelledby="MyOpportunities-tab">
-                  </div>
-
-                  <section className="display-my-opportunities">
-                    <div className="wrapper">
-                      <ul>
+              <Link to={routes.VIEW_OPPS} className="allOpps">All Opportunities</Link>
+              <a>My Opportunities</a>
+                  <section>
                         {this.state.opportunities.map(opportunity => {
                           return (
                             <div className="container">
@@ -132,12 +90,8 @@ class HomePage extends Component {
                             </div> //closing row
                           );
                         })}
-                      </ul>
-                    </div>
                   </section>
                 </div>
-              </div>
-            </div>
 
             {/* <section className='display-my-opportunities'>
             <div className="wrapper">
@@ -161,8 +115,6 @@ class HomePage extends Component {
             </div>
           </section> */}
           </div>
-        </div>
-      </div>
     );
   }
               }

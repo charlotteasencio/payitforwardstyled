@@ -62,50 +62,9 @@ class OrgHomePage extends Component {
         <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
         
         <div class="container">
-          <div class="centered text-center">
-          <div class="card ">
-              <div class="card-header">
-                <ul
-                  class="nav nav-tabs card-header-tabs pull-right"
-                  id="myTab"
-                  role="tablist">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      id="PostOpportunities-tab"
-                      data-toggle="tab"
-                      href="#PostOpportunities"
-                      role="tab"
-                      aria-controls="PostOpportunities"
-                      aria-selected="false">
-                      <Link to={routes.POST_OPPS} className="postOpps">Post an Opportunity</Link>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                    class="nav-link active"
-                    id="All Opportunities-tab"
-                    data-toggle="tab"
-                    href="#All Opportunities"
-                    role="tab"
-                    aria-controls="profile"
-                    aria-selected="true" >All Opportunities
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <div class="tab-content" id="myTabContent">
-                  <div
-                    class="tab-pane fade show active"
-                    id="MyOpportunities"
-                    role="tabpanel"
-                    aria-labelledby="MyOpportunities-tab">
-                  </div>
-
-
-              <section className='display-opportunities'>
-                <div className="wrapper">
+                <Link to={routes.POST_OPPS} className="postOpps">Post an Opportunity</Link>
+                <a>All Opportunities</a>
+              <section>
                   <ul>
                     {this.state.opportunities.map((opportunity) => {
 
@@ -126,14 +85,9 @@ class OrgHomePage extends Component {
                       );
                     })}
                   </ul>
-                </div>
               </section>
-              </div>
-            </div>
           </div>
         </div>
-      </div>
-    </div>
     );
   }
 }

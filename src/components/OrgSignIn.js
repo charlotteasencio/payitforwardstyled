@@ -70,14 +70,10 @@ class OrgSignInForm extends Component {
       email === '';
 
     return (
-      <div className="card container organization-login">
-
+    <div>
       <h1 className="orgheader">Organization Sign In</h1>
       <p className="orgheader">Please sign in to your organization user account.</p>
 
-      <hr/>
-
-      <div className="card-body organization-card-body">
       <form onSubmit={this.onSubmit}>
       <div className="row">
       <div className="col-sm-12">
@@ -107,8 +103,7 @@ class OrgSignInForm extends Component {
 
         { error && <p>{error.message}</p> }
       </form>
-      </div>
-      </div>
+    </div>
       
     );
   }
