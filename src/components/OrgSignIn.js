@@ -97,7 +97,7 @@ class OrgSignInForm extends Component {
         />
       </div>
       </div>  
-        <button disabled={isInvalid} type="submit" className="signinbtn btn btn-primary">
+        <button disabled={isInvalid} type="submit" className="basicButtonBlue">
           Sign In
         </button>
 
