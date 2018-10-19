@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from './Navigation';
-import './Landing.css'
+//import './Landing.css'
 import { Collapsible } from "./Collapsible";
 import { Footer } from "./Footer.js";
 

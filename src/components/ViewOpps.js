@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 //import React from 'react';
 import withAuthorization from './withAuthorization';
 
-import "./ViewOpps.css";
+//import "./ViewOpps.css";
 
 import Navigation from './Navigation';
-import '../components/App.css';
+//import '../components/App.css';
 
 import firebase from 'firebase/app';
 import 'firebase/database'
@@ -25,13 +25,7 @@ class ViewOppsPage extends React.Component {
       opportunities: [],
      
     };
-
-
-
-    
   }
-
-
 
   componentDidMount() {
       const oppsRef = firebase.database().ref('opportunities');

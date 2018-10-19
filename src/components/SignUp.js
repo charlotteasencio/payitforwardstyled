@@ -13,7 +13,7 @@ import { auth, db } from '../firebase';
 import Navigation from './Navigation';
 import ImageUpload from './ImageUpload'
 
-import "./SignUp.css";
+//import "./SignUp.css";
 
 
 
@@ -170,7 +170,7 @@ class SignUpForm extends Component {
                 </div>
                 <div className="row">
                 <div className="col-sm-12">        
-                    <button disabled={isInvalid} type="submit" className="signUpButtonVol">
+                    <button disabled={isInvalid} type="submit" className="basicButtonBlue">
                         Sign Up
                 </button>
                 </div>

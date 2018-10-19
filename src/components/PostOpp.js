@@ -11,7 +11,7 @@ import * as firebase from 'firebase'
 import * as routes from '../constants/routes';
 
 import { db } from '../firebase';
-import "./PostOpps.css";
+//import "./PostOpps.css";
 
 const PostOppPage = ({ history }) =>
     <div>

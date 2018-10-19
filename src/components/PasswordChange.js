@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { auth } from '../firebase';
-import "./PasswordChange.css";
+//import "./PasswordChange.css";
 
 const byPropKey = (propertyName, value) => () => ({
   [propertyName]: value,

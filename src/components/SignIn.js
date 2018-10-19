@@ -6,7 +6,7 @@ import { PasswordForgetLink } from './PasswordForget';
 import { auth } from '../firebase';
 import * as routes from '../constants/routes';
 import Navigation from './Navigation';
-import "./SignIn.css"
+//import "./SignIn.css"
 
 
 
@@ -101,7 +101,7 @@ class SignInForm extends Component {
         />
       </div>
       </div>  
-        <button className="btn btn-primary" id="signinbtn" disabled={isInvalid} type="submit">
+        <button className="basicButtonBlue" id="signinbtn" disabled={isInvalid} type="submit">
           Sign In
         </button>
 

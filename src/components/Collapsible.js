@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./Collapsible.css";
+//import "./Collapsible.css";
 
 
 export class Collapsible extends Component {
@@ -25,7 +25,7 @@ export class Collapsible extends Component {
                 <div>
                     <div id="headingOne">
                         <h5>
-                            <button onClick={this.handleCollapsible}className="btn btn-link collapsed section-title" type="button" data-toggle={collapseState} data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fas fa-chevron-circle-down"></i>
+                            <button onClick={this.handleCollapsible} type="button" data-toggle={collapseState} data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fas fa-chevron-circle-down"></i>
                               About Us
                             </button>
                         </h5>
@@ -40,7 +40,7 @@ export class Collapsible extends Component {
                 <div>
                     <div id="headingTwo">
                         <h5>
-                            <button onClick={this.handleCollapsible} className="btn btn-link collapsed section-title" type="button" data-toggle={collapseState}  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fas fa-chevron-circle-down"></i>
+                            <button onClick={this.handleCollapsible} type="button" data-toggle={collapseState}  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fas fa-chevron-circle-down"></i>
                                 The Mission
                             </button>
                         </h5>
@@ -51,8 +51,8 @@ export class Collapsible extends Component {
                 </div>
                 <div>
                     <div id="headingThree">
-                        <h5 className="mb-0">
-                            <button onClick={this.handleCollapsible} className="btn btn-link collapsed section-title" type="button" data-toggle={collapseState} data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fas fa-chevron-circle-down"></i>
+                        <h5>
+                            <button onClick={this.handleCollapsible} type="button" data-toggle={collapseState} data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fas fa-chevron-circle-down"></i>
                                 Frequently Asked Questions
                             </button>
                         </h5>
@@ -75,7 +75,7 @@ A: Nullam eu metus leo. Donec metus magna, vulputate vitae sodales vulputate, ti
                 <div>
                     <div id="headingFour">
                         <h5>
-                            <button onClick={this.handleCollapsible} className="btn btn-link collapsed section-title" type="button" data-toggle={collapseState}  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fas fa-chevron-circle-down"></i>
+                            <button onClick={this.handleCollapsible} type="button" data-toggle={collapseState}  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fas fa-chevron-circle-down"></i>
                                 Connect with Us
                             </button>
                         </h5>

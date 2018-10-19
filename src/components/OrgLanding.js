@@ -2,7 +2,7 @@ import React from 'react';
 import OrgNavigation from './OrgNavigation';
 import { Collapsible } from "./Collapsible.js";
 import { Footer } from "./Footer.js";
-import "./Landing.css"
+//import "./Landing.css"
 
 
 const OrgLandingPage = () =>

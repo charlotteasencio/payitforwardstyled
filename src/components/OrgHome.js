@@ -4,8 +4,8 @@ import withAuthorization from './withAuthorization';
 import { Link } from 'react-router-dom';
 import * as routes from '../constants/routes';
 import OrgNavigation from './OrgNavigation';
-import '../components/App.css';
-import "./OrgHome.css";
+//import '../components/App.css';
+//import "./OrgHome.css";
 import firebase from 'firebase/app';
 
 class OrgHomePage extends Component {
@@ -52,42 +52,31 @@ class OrgHomePage extends Component {
   }
 
   render() {
-
     return (
-
       <div>
         <OrgNavigation />
-      
+        <div className="headerBox">
         <h2 className="homeh2">Hello, {firebase.auth().currentUser.displayName}</h2>
         <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
-        
-        <div class="container">
-                <Link to={routes.POST_OPPS} className="postOpps">Post an Opportunity</Link>
-                <a>All Opportunities</a>
-              <section>
-                  <ul>
+        </div>
+        <Link to={routes.POST_OPPS}><button>Post an Opportunity</button></Link>
+        <h3>All Opportunities</h3>
                     {this.state.opportunities.map((opportunity) => {
-
                       return (
-                        <div className="container">
+                        <div>
                         <div key={opportunity.id}>
-                        <div className="row all">
-                          <p className="col-md" id="opportunityName">{opportunity.opportunityName}</p>
-                          <p className="myopps col-md-2">{opportunity.date}</p>
-                          <p className="myopps col-md-2">{opportunity.address}</p>
-                          <p className="myopps col-md-2">{opportunity.timeframe}</p>
-                          <p className="myopps col-md-2">{opportunity.description}</p>
-                          <p className="myopps col-md-2">{opportunity.category}</p>
-                          <button className="btn btn-primary delete-btn col-md-2 deleteOppButton" onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
-                          </div>
-                          </div>
+                          <p>{opportunity.opportunityName}</p>
+                          <p>{opportunity.date}</p>
+                          <p>{opportunity.address}</p>
+                          <p>{opportunity.timeframe}</p>
+                          <p>{opportunity.description}</p>
+                          <p>{opportunity.category}</p>
+                          <button onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
+                        </div>
                         </div>
                       );
                     })}
-                  </ul>
-              </section>
           </div>
-        </div>
     );
   }
 }

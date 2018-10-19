@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import * as routes from "../constants/routes";
 import firebase from "firebase/app";
 
-import "./Home.css";
+//import "./Home.css";
 
 class HomePage extends Component {
   constructor(props) {
@@ -58,66 +58,29 @@ class HomePage extends Component {
         <Navigation />
 
         <div className="headerBox">
-        <div className="row">
-        <div className="col-sm-12">
         <h2 className="homeh2">Hello, <br></br> {firebase.auth().currentUser.displayName}</h2>
         <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
         </div>
-        </div>
-        </div>
-        
-        <div class="container">
-              <Link to={routes.VIEW_OPPS} className="allOpps">All Opportunities</Link>
-              <a>My Opportunities</a>
-                  <section>
-                        {this.state.opportunities.map(opportunity => {
-                          return (
-                            <div className="container">
-                              <div key={opportunity.id}>
-                              <div className="row">
-                              <p className="myopps col-md-2">{opportunity.opportunityName}</p>
-                              <p className="myopps col-md-2">{opportunity.date}</p>
-                              <p className="myopps col-md-2">{opportunity.address}</p>
-                              <p className="myopps col-md-2">{opportunity.description}</p>
-                              <p className="myopps col-md-2">{opportunity.category}</p>
-
-                              <button className="btn delete-btn"
-                                onClick={() =>
-                                  this.removeOpportunity(opportunity.id)}>Delete
-                              </button>
-                            </div>
-                            </div>
-                            </div> //closing row
-                          );
-                        })}
-                  </section>
-                </div>
-
-            {/* <section className='display-my-opportunities'>
-            <div className="wrapper">
-              <ul>
-                {this.state.opportunities.map((opportunity) => {
+          <Link to={routes.VIEW_OPPS}><button>All Opportunities</button></Link>
+            <h3>My Opportunities</h3>
+                {this.state.opportunities.map(opportunity => {
                   return (
-                    <div key={opportunity.id}>
-                      <h3>{opportunity.opportunityName}</h3>
-                      <p>Date: {opportunity.date}</p>
-                      <p>Address: {opportunity.address}</p>
-                      <p>Description: {opportunity.description}</p>
-                      <p>Category: {opportunity.category}</p>
-
-
-                      <button onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
-
-                    </div>
-                  )
-                })}
-              </ul>
-            </div>
-          </section> */}
-          </div>
+                    <div>
+                      <div key={opportunity.id}>
+                        <p>{opportunity.opportunityName}</p>
+                        <p>{opportunity.date}</p>
+                        <p>{opportunity.address}</p>
+                        <p>{opportunity.description}</p>
+                        <p>{opportunity.category}</p>
+                        <button onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
+                      </div>
+                    </div> 
+                         );
+                  })}
+        </div>
     );
   }
-              }
+}
 
 const authCondition = authUser => !!authUser;
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { auth } from '../firebase';
-import "./PasswordForget.css";
+//import "./PasswordForget.css";
 import Navigation from "./Navigation";
 
 const PasswordForgetPage = () =>
