@@ -186,15 +186,15 @@ class PostOppForm extends Component {
                     Category:
                         <select value={category} className="postOppsSelect" onChange={ event => this.setState(byPropKey('category', event.target.value))}>
                             <option value="default">Please select one...</option>
-                            <option value="animals">Animals</option>
-                            <option value="children">Children</option>
-                            <option value="community">Community</option>
-                            <option value="compandtech">Computers and Technology</option>
-                            <option value="education">Education</option>
-                            <option value="medical">Medical</option>
-                            <option value="seniors">Seniors</option>
-                            <option value="teens">Teens</option>
-                            <option value="other">Other</option>
+                            <option value="Animals">Animals</option>
+                            <option value="Children">Children</option>
+                            <option value="Community">Community</option>
+                            <option value="Computers and Technology">Computers and Technology</option>
+                            <option value="Education">Education</option>
+                            <option value="Medical">Medical</option>
+                            <option value="Seniors">Seniors</option>
+                            <option value="Teens">Teens</option>
+                            <option value="Other">Other</option>
                         </select>
                         </div>
                 </div>

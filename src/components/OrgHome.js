@@ -59,7 +59,7 @@ class OrgHomePage extends Component {
         <h2 className="homeh2">Hello, {firebase.auth().currentUser.displayName}</h2>
         <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
         </div>
-        <Link to={routes.POST_OPPS}><button>Post an Opportunity</button></Link>
+        <Link to={routes.POST_OPPS}><button className="basicButtonBlue">Post an Opportunity</button></Link>
         <h3>All Opportunities</h3>
                     {this.state.opportunities.map((opportunity) => {
                       return (
@@ -71,7 +71,7 @@ class OrgHomePage extends Component {
                           <p>{opportunity.timeframe}</p>
                           <p>{opportunity.description}</p>
                           <p>{opportunity.category}</p>
-                          <button onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
+                          <button className="basicButtonPink" onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
                         </div>
                         </div>
                       );

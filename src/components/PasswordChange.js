@@ -61,7 +61,7 @@ class PasswordChangeForm extends Component {
           placeholder="Confirm New Password"
           className="passwordChangeInput"
         />
-        <button disabled={isInvalid} type="submit" className="passwordChangeButton">
+        <button disabled={isInvalid} type="submit" className="basicButtonBlue">
           Reset My Password
         </button>
 

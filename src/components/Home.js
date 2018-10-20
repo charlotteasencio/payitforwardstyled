@@ -61,7 +61,7 @@ class HomePage extends Component {
         <h2 className="homeh2">Hello, <br></br> {firebase.auth().currentUser.displayName}</h2>
         <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
         </div>
-          <Link to={routes.VIEW_OPPS}><button>All Opportunities</button></Link>
+          <Link to={routes.VIEW_OPPS}><button className="basicButtonBlue">Find Opportunities!</button></Link>
             <h3>My Opportunities</h3>
                 {this.state.opportunities.map(opportunity => {
                   return (
@@ -72,7 +72,7 @@ class HomePage extends Component {
                         <p>{opportunity.address}</p>
                         <p>{opportunity.description}</p>
                         <p>{opportunity.category}</p>
-                        <button onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
+                        <button className="basicButtonPink" onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
                       </div>
                     </div> 
                          );

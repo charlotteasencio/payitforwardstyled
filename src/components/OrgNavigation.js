@@ -19,9 +19,11 @@ const OrgNavigation = () =>
 const NavigationAuth = () =>
 <div>
   <nav className = "navbarAuthOrg navbar-expand-sm navbar-light">
+  <div className="navLeft">
     <div className="link"><Link className="link" to={routes.ORG_LANDING}>Home</Link></div>
     <div className="link"><Link className="link" to={routes.ORG_HOME}>Profile</Link></div>
     <div className="link"><Link className="link" to={routes.ORG_ACCOUNT}>My Account</Link></div>
+  </div>
     <div className="signOut"><SignOutButton /></div>
   </nav>
 </div>
@@ -29,9 +31,11 @@ const NavigationAuth = () =>
 const NavigationNonAuth = () =>
 <div>
   <nav className = "navbarNonAuth navbar-expand-sm navbar-light">
-    <div><Link className="link" to={routes.LANDING}>Home</Link></div>
+    <div><Link className="link" to={routes.LANDING}><button className="navButton">Home</button></Link></div>
+  <div className="navRight">
     <div><Link className="link" to={routes.SIGN_IN}>Volunteer Sign In</Link></div>
     <div><Link className="link" to={routes.ORG_SIGN_IN}>Organization Sign In</Link></div>
+  </div>
   </nav>
 </div>
 

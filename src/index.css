@@ -2,13 +2,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: white
 }
 
 nav {
-  display: flex;
-  justify-content: flex-start;
   background: white;
   padding: 20px 20px;
+}
+
+.navLeft{
+  display: flex;
+  justify-content: flex-start
 }
 
 nav a {
@@ -33,6 +37,7 @@ nav a:hover{
 .navButton:hover {
   background: lightgrey;
   border: 1px solid lightgrey;
+  cursor: pointer;
 }
 
 .navButton:active {
@@ -73,4 +78,46 @@ nav a:hover{
   background: rgba(11, 108, 235, 0.74); 
   border: 1px solid rgba(11, 108, 235, 0.74); 
   color: rgba(255, 255, 255, 0.685)
+}
+
+.basicButtonPink:disabled {
+  background: rgb(255, 11, 125); 
+  border: 1px solid rgb(255, 11, 125);  
+  color: rgba(255, 255, 255, 0.685)
+}
+
+.basicButtonPink {
+  background: rgb(255, 11, 125); 
+  border: 1px solid rgb(255, 11, 125); 
+  padding: 5px 30px;
+  border-radius: 20px;
+  margin-top: 10px;
+  color: white;
+}
+
+.basicButtonPink:hover {
+  background: lightgrey;
+  border: 1px solid lightgrey;
+}
+
+.basicButtonPink:active {
+  box-shadow: 0 .5px rgb(49, 49, 49);
+  transform: translateY(2px);
+  border: 1px solid lightgrey;
+}
+
+.basicButtonPink:focus {
+  outline: 0;
+}
+
+.signOut{
+ display: flex;
+ justify-content: flex-end;
+ margin-top: -20px;
+}
+
+.navRight {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -30px;
 }

@@ -2,6 +2,9 @@ import React from 'react';
 import OrgNavigation from './OrgNavigation';
 import { Collapsible } from "./Collapsible.js";
 import { Footer } from "./Footer.js";
+import { Collapsible2 } from './Collapsible2';
+import { Collapsible3 } from './Collapsible3';
+import { Collapsible4 } from './Collapsible4';
 //import "./Landing.css"
 
 
@@ -14,6 +17,9 @@ const OrgLandingPage = () =>
     {/*<a className="btn btn-success btn-lg" href="#" role="button">Get Involved!</a>*/}
   </div>
   <Collapsible />
+  <Collapsible2 />
+  <Collapsible3 />
+  <Collapsible4 />
   <Footer />
 </div>
 export default OrgLandingPage;

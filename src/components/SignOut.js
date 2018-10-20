@@ -7,6 +7,7 @@ const SignOutButton = () =>
     type="button"
     onClick={auth.doSignOut}
     className="navButton"
+    id="signOutButton"
   >
     Sign Out
   </button>
