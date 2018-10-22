@@ -186,7 +186,7 @@ class SignUpForm extends Component {
 
 const SignUpLink = () =>
     <div className="signUpLink">
-        Don't have an account?
+        Don't have a volunteer account?
     {' '}
         <Link to={routes.SIGN_UP}>Sign Up</Link>
     </div>

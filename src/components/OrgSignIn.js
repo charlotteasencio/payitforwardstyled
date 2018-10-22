@@ -11,10 +11,11 @@ import OrgNavigation from "./OrgNavigation";
 const OrgSignInPage = ({ history }) =>
   <div>
     <OrgNavigation />
+    <div className="signInSection">
     <OrgSignInForm history={history} />
-    
     <OrgSignUpLink />
     <PasswordForgetLink />
+    </div>
   </div>
 
 const byPropKey = (propertyName, value) => () => ({
@@ -76,29 +77,29 @@ class OrgSignInForm extends Component {
         <p>Please sign in to your organization user account.</p>
       </div>
 
-      <form onSubmit={this.onSubmit}  className="signInForm">
-      <div class="form-group">
-        <input className="emailbox"
-          value={email}
-          onChange={event => this.setState(byPropKey('email', event.target.value))}
-          type="text"
-          placeholder="Email Address"
-          className="orgSignInInput"
-        />
-      </div>
-      <div class="form-group">
-        <input className="passwordbox"
-          value={password}
-          onChange={event => this.setState(byPropKey('password', event.target.value))}
-          type="password"
-          placeholder="Password"
-          className="orgSignInInput"
-        />
+      <form onSubmit={this.onSubmit} className="signInForm">
+        <div class="form-group">
+          <input className="emailbox"
+            value={email}
+            onChange={event => this.setState(byPropKey('email', event.target.value))}
+            type="text"
+            placeholder="Email Address"
+            className="orgSignInInput"
+          />
         </div>
-        <button disabled={isInvalid} type="submit" className="basicButtonBlue">
-          Sign In
-        </button>
-        { error && <p>{error.message}</p> }
+        <div class="form-group">
+          <input className="passwordbox"
+            value={password}
+            onChange={event => this.setState(byPropKey('password', event.target.value))}
+            type="password"
+            placeholder="Password"
+            className="orgSignInInput"
+          />
+          </div>
+          <button disabled={isInvalid} type="submit" className="basicButtonBlue">
+            Sign In
+          </button>
+          { error && <p>{error.message}</p> }
       </form>
     </div>
       

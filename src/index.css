@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: white
+  background: white;
 }
 
 /*navbar*/
@@ -160,7 +160,8 @@ nav a:hover{
 /*landing or home page*/
 
 .landingTopSection {
-  height: 400px;
+  height: 500px;
+  background: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,8 +176,9 @@ nav a:hover{
 .collapsibleSection {
   padding-top: 15px;
   padding-bottom: 15px;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
+  cursor: pointer;
 }
 
 .collapsibleContent {
@@ -188,11 +190,16 @@ nav a:hover{
 
 .collapsibleContent h5 {
   margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .collapsibleContent i {
   color: rgb(11, 108, 235);
   margin-top: 3px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #collapseOne p {
@@ -218,7 +225,7 @@ nav a:hover{
 /*sign in page*/
 
 .signInSection{
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .signInHeader {
@@ -256,11 +263,39 @@ nav a:hover{
   padding-bottom: 10px;
 }
 
+/*middle section*/
+
+.middleSection {
+  background: rgb(11, 108, 235);
+  color: white;
+  height: 400px;
+  padding-top: 20px;
+}
+
+.middleLeftSection {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.middleCenterSection {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.middleRightSection {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.middleSectionImage {
+  padding-bottom: 17px;
+}
+
 /*footer*/
 
 .footer {
-  background: black;
-  color: white;
-  padding-top: 40px;
-  padding-bottom: 50px;
+  color: black;
 }

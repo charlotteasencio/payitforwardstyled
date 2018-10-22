@@ -36,8 +36,8 @@ const NavigationNonAuth = () =>
     <img src={Logo}></img>
     <Link className="link" to={routes.LANDING}>PAY IT FORWARD</Link></div>
   <div className="navRight">
-    <div><Link className="link" to={routes.SIGN_IN}>Volunteer Sign In</Link></div>
-    <div><Link className="link" to={routes.ORG_SIGN_IN}>Organization Sign In</Link></div>
+    <div><Link className="link" to={routes.SIGN_IN}><button className="pinkOutlineButton">Volunteer Sign In</button></Link></div>
+    <div><Link className="link" to={routes.ORG_SIGN_IN}><button className="pinkOutlineButton">Organization Sign In</button></Link></div>
   </div>
   </nav>
 </div>
