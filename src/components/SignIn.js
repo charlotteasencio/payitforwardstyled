@@ -76,9 +76,7 @@ class SignInForm extends Component {
           <h1>Volunteer Sign In</h1>
           <p>Please sign in to your volunteer user account.</p>
         </div>
-        <div>
-          <form onSubmit={this.onSubmit} className="signInForm">
-            <div class="form-group">
+          <form onSubmit={this.onSubmit} className="signUpForm">
               <input className="emailbox"
                 value={email}
                 onChange={event => this.setState(byPropKey('email', event.target.value))}
@@ -86,8 +84,6 @@ class SignInForm extends Component {
                 placeholder="Email Address"
                 className="volSignInInput"
               />
-            </div>
-            <div class="form-group">
               <input className="passwordbox"
                 value={password}
                 onChange={event => this.setState(byPropKey('password', event.target.value))}
@@ -95,13 +91,11 @@ class SignInForm extends Component {
                 placeholder="Password"
                 className="volSignInInput"
               />
-            </div>
               <button className="basicButtonBlue" id="signinbtn" disabled={isInvalid} type="submit">
                 Sign In
               </button>
             { error && <p>{error.message}</p> }
         </form>
-      </div>
     </div>
     );
   }

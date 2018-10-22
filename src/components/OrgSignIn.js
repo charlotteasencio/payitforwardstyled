@@ -77,8 +77,7 @@ class OrgSignInForm extends Component {
         <p>Please sign in to your organization user account.</p>
       </div>
 
-      <form onSubmit={this.onSubmit} className="signInForm">
-        <div class="form-group">
+      <form onSubmit={this.onSubmit} className="signUpForm">
           <input className="emailbox"
             value={email}
             onChange={event => this.setState(byPropKey('email', event.target.value))}
@@ -86,8 +85,6 @@ class OrgSignInForm extends Component {
             placeholder="Email Address"
             className="orgSignInInput"
           />
-        </div>
-        <div class="form-group">
           <input className="passwordbox"
             value={password}
             onChange={event => this.setState(byPropKey('password', event.target.value))}
@@ -95,7 +92,6 @@ class OrgSignInForm extends Component {
             placeholder="Password"
             className="orgSignInInput"
           />
-          </div>
           <button disabled={isInvalid} type="submit" className="basicButtonBlue">
             Sign In
           </button>

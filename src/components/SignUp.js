@@ -119,12 +119,12 @@ class SignUpForm extends Component {
         return (
             <div>
                 <Navigation />
-                <div className="parallax">
-                <h2 className="signUph2">Ready to start <br></br> paying it forward?</h2>
-                <h5 className="signUph5">Fill out the form below to join us in giving back!</h5>
-                <form className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center signUpForm" onSubmit={this.onSubmit}>
-                <div className="row">
-                <div className="col-sm-12">
+                <div className="signUpSection">
+                <div className="signUpHeader">
+                    <h2>Ready to start paying it forward?</h2>
+                    <h5>Fill out the form below to join us in giving back!</h5>
+                </div>
+                <form className="signUpForm" onSubmit={this.onSubmit}>
                     <input
                         value={displayName}
                         onChange={event => this.setState(byPropKey('displayName', event.target.value))}
@@ -132,10 +132,6 @@ class SignUpForm extends Component {
                         placeholder="Full Name"
                         className="signUpVolInput"
                     />
-                </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-12">    
                     <input
                         value={email}
                         onChange={event => this.setState(byPropKey('email', event.target.value))}
@@ -143,10 +139,6 @@ class SignUpForm extends Component {
                         placeholder="Email Address"
                         className="signUpVolInput"
                     />
-                </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-12">    
                     <input
                         value={passwordOne}
                         onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
@@ -154,32 +146,20 @@ class SignUpForm extends Component {
                         placeholder="Password"
                         className="signUpVolInput"
                     />
-                </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-12">    
                     <input
                         value={passwordTwo}
                         onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
                         type="password"
                         placeholder="Confirm Password"
                         className="signUpVolInput"
-                    />
-
-                </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-12">        
+                    />      
                     <button disabled={isInvalid} type="submit" className="basicButtonBlue">
                         Sign Up
                 </button>
-                </div>
-                </div>
-
                     {error && <p>{error.message}</p>}
                 </form>
-                </div>
             </div>
+        </div>
         );
     }
 }
