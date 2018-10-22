@@ -21,7 +21,7 @@ const NavigationAuth = () =>
 <div>
   <nav className = "navbarAuthVol navbar-expand-sm navbar-light">
    <div className="navLeft">
-   <img src={Logo}></img>
+    <img src={Logo}></img>  
     <div className="leftnavlink"><Link className="navlink" to={routes.LANDING}>Home</Link></div>
     <div className="leftnavlink"><Link className="navlink" to={routes.HOME}>Profile</Link></div>
     <div className="leftnavlink"><Link className="navlink" to={routes.ACCOUNT}>Account</Link></div>

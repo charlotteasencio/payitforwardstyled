@@ -41,8 +41,9 @@ nav a:hover{
 }
 
 .navButton:hover {
-  background: lightgrey;
-  border: 1px solid lightgrey;
+  background: white;
+  border: 1px solid rgb(255, 213, 24);
+  color: rgb(255, 213, 24);
   cursor: pointer;
 }
 
@@ -82,8 +83,9 @@ nav a:hover{
 }
 
 .basicButtonBlue:hover {
-  background: lightgrey;
-  border: 1px solid lightgrey;
+  background: white;
+  border: 1px solid rgb(11, 108, 235);
+  color: rgb(11, 108, 235)
 }
 
 .basicButtonBlue:active {
@@ -120,8 +122,9 @@ nav a:hover{
 }
 
 .basicButtonPink:hover {
-  background: lightgrey;
-  border: 1px solid lightgrey;
+  background: white;
+  border: 1px solid rgb(255, 11, 125);
+  color: rgb(255, 11, 125)
 }
 
 .basicButtonPink:active {
@@ -136,18 +139,18 @@ nav a:hover{
 
 /*outline button pink*/
 .pinkOutlineButton {
-  background: white;
+  background: rgb(255, 11, 125);
   border: 1.2px solid rgb(255, 11, 125);
-  color: rgb(255, 11, 125);
+  color: white;
   border-radius: 20px;
   padding: 10px;
   margin-top: -10px;
 }
 
 .pinkOutlineButton:hover {
-  background: rgb(255, 11, 125);
+  background: white;
   border: 1.2px solid rgb(255, 11, 125);
-  color: white;
+  color: rgb(255, 11, 125);
   border-radius: 20px;
   padding: 10px;
   margin-top: -10px;
