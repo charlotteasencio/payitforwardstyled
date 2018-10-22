@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 export class Footer extends Component {
     render() {
         return (
-            <div className = "footerelems">
+            <div className = "footer">
                 <p><a href="mailto:webmaster@example.com">payitforward@gmail.com</a></p>
                 <p>phone: 555-555-555</p>
                 <p>Address: 320 E 9th St, Charlotte, NC 28202</p>

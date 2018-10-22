@@ -16,10 +16,12 @@ const OrgLandingPage = () =>
     <h4>A place to connect volunteers with volunteer opportunties.</h4>
     {/*<a className="btn btn-success btn-lg" href="#" role="button">Get Involved!</a>*/}
   </div>
+  <div className="collapsibleSection">
   <Collapsible />
   <Collapsible2 />
   <Collapsible3 />
   <Collapsible4 />
+  </div>
   <Footer />
 </div>
 export default OrgLandingPage;

@@ -70,9 +70,9 @@ class PasswordForgetForm extends Component {
 }
 
 const PasswordForgetLink = () =>
-  <p>
+  <div className="forgotPasswordLink">
     <Link to="/pw-forget">Forgot Password?</Link>
-  </p>
+  </div>
 
 export default PasswordForgetPage;
 

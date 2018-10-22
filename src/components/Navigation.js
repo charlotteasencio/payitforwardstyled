@@ -5,7 +5,8 @@ import AuthUserContext from './AuthUserContext';
 import SignOutButton from './SignOut';
 import * as routes from '../constants/routes';
 //import "./Navigation.css";
-//import logo from "./images/logo.png";
+import Logo from './images/logo2.png';
+import "../index.css";
 
 
 const Navigation = () =>
@@ -20,9 +21,10 @@ const NavigationAuth = () =>
 <div>
   <nav className = "navbarAuthVol navbar-expand-sm navbar-light">
    <div className="navLeft">
-    <div className="navlink"><Link className="navlink" to={routes.LANDING}>Home</Link></div>
-    <div className="navlink"><Link className="navlink" to={routes.HOME}>Profile</Link></div>
-    <div className="navlink"><Link className="navlink" to={routes.ACCOUNT}>Account</Link></div>
+   <img src={Logo}></img>
+    <div className="leftnavlink"><Link className="navlink" to={routes.LANDING}>Home</Link></div>
+    <div className="leftnavlink"><Link className="navlink" to={routes.HOME}>Profile</Link></div>
+    <div className="leftnavlink"><Link className="navlink" to={routes.ACCOUNT}>Account</Link></div>
   </div>
     <div className="signOut"><SignOutButton /></div>
   </nav>
@@ -31,10 +33,12 @@ const NavigationAuth = () =>
 const NavigationNonAuth = () =>
 <div>
   <nav className = "navbarNonAuth navbar-expand-sm navbar-light">
-      <div><Link className="navlink" id="home" to={routes.LANDING}><button className="navButton">Home</button></Link></div>
+      <div>
+        <img src={Logo}></img>
+        <Link className="navlink" id="home" to={routes.LANDING}>PAY IT FORWARD</Link></div>
     <div className="navRight">
-      <div><Link className="navlink" to={routes.SIGN_IN}>Volunteer Sign In</Link></div>
-      <div><Link className="navlink" to={routes.ORG_SIGN_IN}>Organization Sign In</Link></div>
+      <div><Link className="navlink" to={routes.SIGN_IN}><button className="pinkOutlineButton">Volunteer Sign In</button></Link></div>
+      <div><Link className="navlink" to={routes.ORG_SIGN_IN}><button className="pinkOutlineButton">Organization Sign In</button></Link></div>
     </div>
   </nav>
 </div>

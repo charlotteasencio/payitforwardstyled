@@ -71,12 +71,13 @@ class OrgSignInForm extends Component {
 
     return (
     <div>
-      <h1 className="orgheader">Organization Sign In</h1>
-      <p className="orgheader">Please sign in to your organization user account.</p>
+      <div className="signInHeader">
+        <h1>Organization Sign In</h1>
+        <p>Please sign in to your organization user account.</p>
+      </div>
 
-      <form onSubmit={this.onSubmit}>
-      <div className="row">
-      <div className="col-sm-12">
+      <form onSubmit={this.onSubmit}  className="signInForm">
+      <div class="form-group">
         <input className="emailbox"
           value={email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}
@@ -84,10 +85,8 @@ class OrgSignInForm extends Component {
           placeholder="Email Address"
           className="orgSignInInput"
         />
-        </div>
-      </div>  
-      <div className="row">
-      <div className="col-sm-12">
+      </div>
+      <div class="form-group">
         <input className="passwordbox"
           value={password}
           onChange={event => this.setState(byPropKey('password', event.target.value))}
@@ -95,12 +94,10 @@ class OrgSignInForm extends Component {
           placeholder="Password"
           className="orgSignInInput"
         />
-      </div>
-      </div>  
+        </div>
         <button disabled={isInvalid} type="submit" className="basicButtonBlue">
           Sign In
         </button>
-
         { error && <p>{error.message}</p> }
       </form>
     </div>

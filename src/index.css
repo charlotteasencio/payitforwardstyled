@@ -5,6 +5,8 @@ body {
   background: white
 }
 
+/*navbar*/
+
 nav {
   background: white;
   padding: 20px 20px;
@@ -13,6 +15,10 @@ nav {
 .navLeft{
   display: flex;
   justify-content: flex-start
+}
+
+.leftnavlink {
+  margin-top: 10px;
 }
 
 nav a {
@@ -50,6 +56,22 @@ nav a:hover{
   outline: 0;
 }
 
+.signOut{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -40px;
+ }
+ 
+ .navRight {
+   display: flex;
+   justify-content: flex-end;
+   margin-top: -40px;
+ }
+
+ /*basic buttons*/
+
+ /*blue button*/
+
 .basicButtonBlue {
   background: rgb(11, 108, 235);
   border: 1px solid rgb(11, 108, 235);
@@ -79,6 +101,8 @@ nav a:hover{
   border: 1px solid rgba(11, 108, 235, 0.74); 
   color: rgba(255, 255, 255, 0.685)
 }
+
+/*pink button*/
 
 .basicButtonPink:disabled {
   background: rgb(255, 11, 125); 
@@ -110,14 +134,133 @@ nav a:hover{
   outline: 0;
 }
 
-.signOut{
- display: flex;
- justify-content: flex-end;
- margin-top: -20px;
+/*outline button pink*/
+.pinkOutlineButton {
+  background: white;
+  border: 1.2px solid rgb(255, 11, 125);
+  color: rgb(255, 11, 125);
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: -10px;
 }
 
-.navRight {
+.pinkOutlineButton:hover {
+  background: rgb(255, 11, 125);
+  border: 1.2px solid rgb(255, 11, 125);
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: -10px;
+}
+
+.pinkOutlineButton:focus {
+  outline: 0;
+}
+
+/*landing or home page*/
+
+.landingTopSection {
+  height: 400px;
   display: flex;
-  justify-content: flex-end;
-  margin-top: -30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landingTopSection h2 {
+  margin-top: 150px;
+}
+
+/*collapsible*/
+
+.collapsibleSection {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: black;
+  color: white;
+}
+
+.collapsibleContent {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30px;
+  padding-top: 20px;
+}
+
+.collapsibleContent h5 {
+  margin-left: 10px;
+}
+
+.collapsibleContent i {
+  color: rgb(11, 108, 235);
+  margin-top: 3px;
+}
+
+#collapseOne p {
+  margin-left: 30px;
+  margin-right: 100px;
+}
+
+#collapseTwo p {
+  margin-left: 30px;
+  margin-right: 100px;
+}
+
+#collapseThree{
+  margin-left: 30px;
+  margin-right: 100px;
+}
+
+#collapseFour form {
+  margin-left: 30px;
+  margin-right: 40%;
+}
+
+/*sign in page*/
+
+.signInSection{
+  margin-top: 100px;
+}
+
+.signInHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  padding-top: 10px;
+}
+
+.signInForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signInForm input {
+  width: 400px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.signUpLink {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  color: black;
+}
+
+.forgotPasswordLink {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+/*footer*/
+
+.footer {
+  background: black;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }

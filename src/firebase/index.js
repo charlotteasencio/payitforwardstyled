@@ -9,5 +9,4 @@ export {
   db,
   firebase,
   storage
-
 };

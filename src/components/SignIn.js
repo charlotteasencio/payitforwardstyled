@@ -8,15 +8,14 @@ import * as routes from '../constants/routes';
 import Navigation from './Navigation';
 //import "./SignIn.css"
 
-
-
-
 const SignInPage = ({ history }) =>
   <div>
     <Navigation />
+    <div className="signInSection">
     <SignInForm history={history} />
     <SignUpLink />
     <PasswordForgetLink />
+    </div>
   </div>
 
 const byPropKey = (propertyName, value) => () => ({
@@ -73,42 +72,37 @@ class SignInForm extends Component {
 
     return (
       <div>
-
-        <h1 className="volheader">Volunteer Sign In</h1>
-        <p className="volheader">Please sign in to your volunteer user account.</p>
-        
-      <div>
-      <form onSubmit={this.onSubmit}>
-      <div className="row">
-      <div className="col-sm-12">
-        <input className="emailbox"
-          value={email}
-          onChange={event => this.setState(byPropKey('email', event.target.value))}
-          type="text"
-          placeholder="Email Address"
-          className="volSignInInput"
-        />
+        <div className="signInHeader">
+          <h1>Volunteer Sign In</h1>
+          <p>Please sign in to your volunteer user account.</p>
+        </div>
+        <div>
+          <form onSubmit={this.onSubmit} className="signInForm">
+            <div class="form-group">
+              <input className="emailbox"
+                value={email}
+                onChange={event => this.setState(byPropKey('email', event.target.value))}
+                type="text"
+                placeholder="Email Address"
+                className="volSignInInput"
+              />
+            </div>
+            <div class="form-group">
+              <input className="passwordbox"
+                value={password}
+                onChange={event => this.setState(byPropKey('password', event.target.value))}
+                type="password"
+                placeholder="Password"
+                className="volSignInInput"
+              />
+            </div>
+              <button className="basicButtonBlue" id="signinbtn" disabled={isInvalid} type="submit">
+                Sign In
+              </button>
+            { error && <p>{error.message}</p> }
+        </form>
       </div>
-      </div>
-      <div className="row">
-      <div className="col-sm-12">  
-        <input className="passwordbox"
-          value={password}
-          onChange={event => this.setState(byPropKey('password', event.target.value))}
-          type="password"
-          placeholder="Password"
-          className="volSignInInput"
-        />
-      </div>
-      </div>  
-        <button className="basicButtonBlue" id="signinbtn" disabled={isInvalid} type="submit">
-          Sign In
-        </button>
-
-        { error && <p>{error.message}</p> }
-      </form>
-      </div>
-      </div>
+    </div>
     );
   }
 }
