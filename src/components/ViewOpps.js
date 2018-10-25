@@ -42,7 +42,8 @@ class ViewOppsPage extends React.Component {
                     address: opportunities[opportunity].address,
                     category: opportunities[opportunity].category,
                     numberOfVolunteers: opportunities[opportunity].numberOfVolunteers,
-                    photoURL: opportunities[opportunity].photoURL
+                    photoURL: opportunities[opportunity].photoURL,
+                    uid: opportunities[opportunity].uid
                 });
             }
             this.setState({
@@ -54,7 +55,7 @@ class ViewOppsPage extends React.Component {
   };
 
 
-    SignUpOpp(opportunityName, date, address, category, description, photoURL) {
+    SignUpOpp(opportunityName, date, address, category, description, photoURL, uid) {
       var user = firebase.auth().currentUser;
         firebase.database().ref('users').child(user.uid + "/myopportunities")
         .push({
@@ -64,6 +65,7 @@ class ViewOppsPage extends React.Component {
           category: `${category}`,
           description: `${description}`,
           photoURL: `${photoURL}`,   
+          uid: `${uid}`,   
         })
         
         
@@ -103,6 +105,7 @@ class ViewOppsPage extends React.Component {
               </div> 
               <div className="col-sm-6"> 
                 <img src={opportunity.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} className="profileImg" height="100" width="100" />
+                <p>{opportunity.uid}</p>
               </div>
           </div>    
                 

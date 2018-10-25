@@ -23,7 +23,7 @@ const OrgAccountPage = () =>
         <p className="accountP">Email: {authUser.email}</p>
         <p className="accountP">Organization: {authUser.displayName}</p>
        <p className="profileImg">Profile Photo:</p>
-        <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profileImg" height="200" width="200" />
+        <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
         <div>
         <h2>Add your Logo</h2>
         <ImageUpload />

@@ -5,6 +5,7 @@ import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
 import * as routes from "../constants/routes";
 import firebase from "firebase/app";
+import { Carousel } from 'react-responsive-carousel';
 
 //import "./Home.css";
 
@@ -57,26 +58,28 @@ class HomePage extends Component {
       <div>
         <Navigation />
 
-        <div className="headerBox">
-        <h2 className="homeh2">Hello, <br></br> {firebase.auth().currentUser.displayName}</h2>
+        <div className="userProfileHeader">
+        <h3 className="homeh2">Hello,{firebase.auth().currentUser.displayName}</h3>
         <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
+        <Link to={routes.VIEW_OPPS}><button className="basicButtonYellow">Find Opportunities!</button></Link>
         </div>
-          <Link to={routes.VIEW_OPPS}><button className="basicButtonBlue">Find Opportunities!</button></Link>
-            <h3>My Opportunities</h3>
+          <div className="volOppsSection">
+          <div className="volOppsHeader">
+            <h3>Where You're Volunteering</h3>
+          </div>
                 {this.state.opportunities.map(opportunity => {
                   return (
-                    <div>
-                      <div key={opportunity.id}>
+                      <div className="volOpp" key={opportunity.id}>
+                        <img src={opportunity.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} className="profileImg" height="100" width="100" />
                         <p>{opportunity.opportunityName}</p>
                         <p>{opportunity.date}</p>
                         <p>{opportunity.address}</p>
-                        <p>{opportunity.description}</p>
                         <p>{opportunity.category}</p>
                         <button className="basicButtonPink" onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
                       </div>
-                    </div> 
                          );
                   })}
+          </div>
         </div>
     );
   }

@@ -171,7 +171,7 @@ class OrgSignUpForm extends Component {
                     placeholder="Confirm Password"
                     className="orgSignUpInput"
                 />
-                <button disabled={isInvalid} type="submit" className="orgSignUpButton">
+                <button disabled={isInvalid} type="submit" className="basicButtonBlue">
                     Sign Up
                 </button>
                 {error && <p>{error.message}</p>}

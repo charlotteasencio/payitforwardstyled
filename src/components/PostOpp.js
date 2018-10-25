@@ -34,6 +34,7 @@ const INITIAL_STATE = {
     category: 'default',
     postedBy: '',
     photoURL: '',
+    uid: '',
     error: null,
 };
 
@@ -62,7 +63,7 @@ class PostOppForm extends Component {
             address,
             description,
             category,
-            postedBy,
+            uid,
             photoURL
 
 
@@ -98,7 +99,7 @@ class PostOppForm extends Component {
             address,
             description,
             category,
-            postedBy,
+            uid,
             error
         } = this.state;
 

@@ -5,6 +5,14 @@ body {
   background: white;
 }
 
+input {
+  padding: 3px;
+}
+
+textarea {
+  padding: 3px;
+}
+
 /*navbar*/
 
 nav {
@@ -157,6 +165,32 @@ nav a:hover{
 }
 
 .pinkOutlineButton:focus {
+  outline: 0;
+}
+
+/*yellow button blue background*/
+.basicButtonYellow {
+  background: rgb(255, 213, 24);
+  border: 1px solid rgb(255, 213, 24);
+  padding: 5px 30px;
+  border-radius: 20px;
+  margin-top: -7px;
+}
+
+.basicButtonYellow:hover {
+  background: white;
+  border: 1px solid rgb(255, 213, 24);
+  color: rgb(255, 213, 24);
+  cursor: pointer;
+}
+
+.basicButtonYellow:active {
+  box-shadow: 0 .5px rgb(49, 49, 49);
+  transform: translateY(2px);
+  border: 1px solid lightgrey;
+}
+
+.basicButtonYellow:focus {
   outline: 0;
 }
 
@@ -358,4 +392,60 @@ nav a:hover{
 
 .bottomRow p{
   text-align: center
+}
+
+/*user profile home*/
+
+.userProfileHeader {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 10px 10px 20px 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: black;
+}
+
+.profImage {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.volOppsSection {
+  display: flex;
+  justify-content: center;
+  background: rgb(11, 108, 235);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 2%;
+}
+
+.volOpp {
+  display: flex;
+  align-items: flex-start;
+  margin: 15px 2%;
+  background: rgb(49, 49, 49);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.volOpp p {
+  display: flex;
+  align-self: flex-start;
+  width: 20%;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+.volOpp img {
+  border-radius: 50px;
+}
+
+.volOpp button {
+  margin-top: 20px;
 }
