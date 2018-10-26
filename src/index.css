@@ -421,7 +421,7 @@ nav a:hover{
 }
 
 .userProfileHeader h3 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .profImageDiv {
@@ -463,7 +463,7 @@ nav a:hover{
 
 
 .userProfileHeader button {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .volOpp {
@@ -494,6 +494,7 @@ nav a:hover{
   color: white;
   padding: 20px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .singleOppHeader {
@@ -502,7 +503,12 @@ nav a:hover{
 }
 
 .singleOppHeader img {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
+  margin-right: 40px;
+}
+
+.singleOppHeader h5 {
+  margin-top: 20px;
 }

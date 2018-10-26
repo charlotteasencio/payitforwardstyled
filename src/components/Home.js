@@ -68,7 +68,7 @@ class HomePage extends Component {
         <div className="userProfileHeader">
         <h3 className="homeh2">Hello, {firebase.auth().currentUser.displayName}</h3>
         <Link className="navlink" to={routes.ACCOUNT}><div className="userImageDiv">
-          <div className="profImageDiv"><p className="text-center"> + Edit Profile</p></div>
+          <div className="profImageDiv"><p className="text-center"> + Edit Account</p></div>
           <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage"/>
         </div>
         </Link>
