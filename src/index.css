@@ -407,45 +407,55 @@ nav a:hover{
   color: black;
 }
 
-.profImage {
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  margin-top: 10px;
+.userProfileHeader h3 {
   margin-bottom: 20px;
 }
 
-.volOppsSection {
-  display: flex;
-  justify-content: center;
+#profImageDiv {
+  background-color: rgb(255, 11, 125);
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.profImage {
+  height: 120px;
+  width: 120px; 
+  border-radius: 50%;
+}
+
+.userProfileHeader button {
+  margin-top: 30px;
+}
+
+.blueBackground {
   background: rgb(11, 108, 235);
-  padding: 20px;
+  padding: 7px;
   border-radius: 10px;
-  margin: 0 2%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .volOpp {
-  display: flex;
-  align-items: flex-start;
-  margin: 15px 2%;
+  margin: 20px;
   background: rgb(49, 49, 49);
   color: white;
   border-radius: 10px;
-  padding: 20px;
+}
+
+.volOpp Img {
+  height: 100px;
+  width: 100px;
+  margin: 20px 0px 20px 20px;
 }
 
 .volOpp p {
-  display: flex;
-  align-self: flex-start;
-  width: 20%;
-  margin-left: 40px;
-  margin-top: 10px;
-}
-
-.volOpp img {
-  border-radius: 50px;
+  margin-top: 20px;
 }
 
 .volOpp button {
   margin-top: 20px;
+}
+
+img{
+background-image:url('./components/images/blueplaceholder.png');
 }

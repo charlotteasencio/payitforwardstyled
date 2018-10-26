@@ -5,7 +5,6 @@ import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
 import * as routes from "../constants/routes";
 import firebase from "firebase/app";
-import { Carousel } from 'react-responsive-carousel';
 
 //import "./Home.css";
 
@@ -53,37 +52,57 @@ class HomePage extends Component {
     oppRef.remove();
   }
 
+  onerror() {
+    document.querySelectorAll('img').forEach(function(img){
+      img.onerror = function(){this.style.display="none";};
+    })
+  }
+
   render() {
     return (
       <div>
         <Navigation />
 
         <div className="userProfileHeader">
-        <h3 className="homeh2">Hello,{firebase.auth().currentUser.displayName}</h3>
-        <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
+        <h3 className="homeh2">Hello, {firebase.auth().currentUser.displayName}</h3>
+        <div id="profImageDiv"><img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage"/></div>
         <Link to={routes.VIEW_OPPS}><button className="basicButtonYellow">Find Opportunities!</button></Link>
         </div>
-          <div className="volOppsSection">
-          <div className="volOppsHeader">
-            <h3>Where You're Volunteering</h3>
-          </div>
+          <div className="blueBackground">
                 {this.state.opportunities.map(opportunity => {
                   return (
+                    <div className="volOppsSection">
                       <div className="volOpp" key={opportunity.id}>
-                        <img src={opportunity.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} className="profileImg" height="100" width="100" />
+                      <div className="row">
+                      <div className="col-sm-2">
+                        <img src={opportunity.photoURL || this.onerror()}/>
+                      </div>
+                      <div className="col-sm-2">
                         <p>{opportunity.opportunityName}</p>
+                      </div>
+                      <div className="col-sm-2">
                         <p>{opportunity.date}</p>
+                      </div>
+                      <div className="col-sm-2">
                         <p>{opportunity.address}</p>
+                      </div>
+                      <div className="col-sm-2">
                         <p>{opportunity.category}</p>
+                      </div>
+                      <div className="col-sm-2">
                         <button className="basicButtonPink" onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
                       </div>
+                      </div>
+                    </div>
+                  </div>
                          );
                   })}
-          </div>
         </div>
+      </div>
     );
   }
 }
+
 
 const authCondition = authUser => !!authUser;
 
