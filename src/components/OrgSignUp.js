@@ -183,9 +183,9 @@ class OrgSignUpForm extends Component {
 
 const OrgSignUpLink = () =>
     <div className="signUpLink">
-        Don't have an organization account?
+        <p>Don't have an organization account?
     {' '}
-        <Link to={routes.ORG_SIGN_UP}>Sign Up</Link>
+        <Link to={routes.ORG_SIGN_UP}>Sign Up</Link></p>
     </div>
 
 

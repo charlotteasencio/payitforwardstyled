@@ -8,6 +8,8 @@ import { Footer } from "./Footer.js";
 import { Collapsible2 } from "./Collapsible2";
 import { Collapsible3 } from './Collapsible3';
 import { Collapsible4 } from './Collapsible4';
+import * as routes from "../constants/routes";
+import { Link } from "react-router-dom";
 import "../index.css"
 
 const LandingPage = () =>
@@ -16,7 +18,7 @@ const LandingPage = () =>
     <div className="landingTopSection">
       <h2>Welcome To Pay it Forward</h2>
       <h4>A place to connect volunteers with volunteer opportunties.</h4>
-      {/*<a className="btn btn-success btn-lg" href="#" role="button">Get Involved!</a>*/}
+      <Link to={routes.VIEW_OPPS}><button id="getInvolvedButton" className="basicButtonPink">Get Involved!</button></Link>
     </div>
     <div className="middleSection">
     <div className="row">

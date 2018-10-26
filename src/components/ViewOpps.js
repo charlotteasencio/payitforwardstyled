@@ -71,71 +71,49 @@ class ViewOppsPage extends React.Component {
         
       }
       
-  
-
-  
   render() {
-
-    
-  
     return (
-        
       <div>
-         
         <Navigation />
-   
-      <div className="parallax">
-         <h2 className="viewOppsh2">Go ahead and find your <br></br> way to give back!</h2>
-         <h5 className="viewOppsh5">Just click the sign up button and get volunteering.</h5>
-
-        
-         <section className='display-opportunites'>
-            <div className="wrapper">
-             <ul>
-            {this.state.opportunities.map((opportunity) => {
-        return (
-
-    <div className="opportunities pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center"> 
-        <div className="container">
-          <div key={opportunity.id}>
-            <div className="row">
-              <div className="col-sm-6">
-                <div className="opportunityName">{opportunity.opportunityName}</div>
-                <div className="opportunityCategory" >{opportunity.category}</div>
-              </div> 
-              <div className="col-sm-6"> 
-                <img src={opportunity.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} className="profileImg" height="100" width="100" />
-                <p>{opportunity.uid}</p>
-              </div>
-          </div>    
-                
-          </div>
-          <div className="row">
-            <div className="col-sm-12">
-              <div className="opportunityBox">
-                <p className="opportunityDate"><FontAwesomeIcon  className="icon" icon={faCalendarAlt} />{opportunity.date}</p>
-                <p className="opportunityAddress"><FontAwesomeIcon  className="icon" icon={faClock} />{opportunity.address}</p>
-                <p className="opportunityTime"><FontAwesomeIcon  className="icon" icon={faMapMarkerAlt} />{opportunity.timeframe}</p>
-              </div>
-              </div>
-            </div>
-            <div className="row">
-            <div className="col-sm-12">
-            <p className="opportunityDescription">{opportunity.description}</p>
-            </div>
-            </div>
-           {/*} <p>ID: {opportunity.id} </p>*/}
-            <button className="opportunitySignupButton" onClick={() => this.SignUpOpp(opportunity.opportunityName, opportunity.date, opportunity.description, opportunity.category, opportunity.address, opportunity.photoURL)}>Sign Up</button>
-          </div>
+        <div className="userProfileHeader">
+          <h2>Go ahead and find your way to give back!</h2>
+          <h5>Just click the sign up button and get volunteering.</h5>
         </div>
-        )
-      })}
-    </ul>
-  </div>
-</section>
+         <section className='display-opportunites'>
+          <div className="wrapper">
+          {this.state.opportunities.map((opportunity) => {
+          return (
+            <div className="container oppsContainer"> 
+                  <div key={opportunity.id}>
+                    <div className="row">
+                      <div className="col-sm-12 text-center singleOppHeader"> 
+                          <img src={opportunity.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} />
+                          <h5 className="opportunityName">{opportunity.opportunityName}</h5>
+                      </div> 
+                    </div>    
+                        
+                  </div>
+                  <div className="row">
+                    <div className="col-sm-12 text-center">
+                      <p className="opportunityDate"><FontAwesomeIcon  className="icon" icon={faCalendarAlt} />{opportunity.date}</p>
+                      <p className="opportunityAddress"><FontAwesomeIcon  className="icon" icon={faClock} />{opportunity.address}</p>
+                      <p className="opportunityTime"><FontAwesomeIcon  className="icon" icon={faMapMarkerAlt} />{opportunity.timeframe}</p>
+                    </div>
+                    </div>
+                  <div className="row">
+                    <div className="col-sm-12 text-center">
+                      <p className="opportunityDescription">{opportunity.description}</p>
+                    </div>
+                  </div>
+                  {/*} <p>ID: {opportunity.id} </p>*/}
+                    <button className="opportunitySignupButton" onClick={() => this.SignUpOpp(opportunity.opportunityName, opportunity.date, opportunity.description, opportunity.category, opportunity.address, opportunity.photoURL)}>Sign Up</button>
+              </div>
+                )
+              })}
+          </div>
+      </section>
 
-</div>
-</div>      
+</div>  
     
       
     );

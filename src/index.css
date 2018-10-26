@@ -156,21 +156,21 @@ nav a:hover{
 
 /*outline button pink*/
 .pinkOutlineButton {
-  background: rgb(255, 11, 125);
-  border: 1.2px solid rgb(255, 11, 125);
-  color: white;
-  border-radius: 20px;
-  padding: 10px;
-  margin-top: -10px;
-}
-
-.pinkOutlineButton:hover {
   background: white;
   border: 1.2px solid rgb(255, 11, 125);
   color: rgb(255, 11, 125);
+  padding: 5px 30px;
   border-radius: 20px;
-  padding: 10px;
-  margin-top: -10px;
+  margin-top: 10px;
+}
+
+.pinkOutlineButton:hover {
+  background: rgb(255, 11, 125);
+  border: 1.2px solid rgb(255, 11, 125);
+  color: white;
+  padding: 5px 30px;
+  border-radius: 20px;
+  margin-top: 10px;
 }
 
 .pinkOutlineButton:focus {
@@ -206,7 +206,7 @@ nav a:hover{
 /*landing or home page*/
 
 .landingTopSection {
-  height: 500px;
+  height: 450px;
   background: white;
   display: flex;
   flex-direction: column;
@@ -214,7 +214,42 @@ nav a:hover{
 }
 
 .landingTopSection h2 {
-  margin-top: 150px;
+  margin-top: 140px;
+}
+
+#getInvolvedButton {
+  margin-top: 50px;
+}
+
+/*middle section*/
+
+.middleSection {
+  background: rgb(11, 108, 235);
+  color: white;
+  padding: 3% 0px;
+  margin-bottom: 2%;
+}
+
+.middleLeftSection {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.middleCenterSection {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.middleRightSection {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.middleSectionImage {
+  padding-bottom: 17px;
 }
 
 /*collapsible*/
@@ -273,6 +308,22 @@ nav a:hover{
   margin-left: 30px;
   margin-right: 40%;
   margin-top: 20px;
+}
+
+/*footer*/
+
+.topRow {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.topRow p {
+  margin-left: 20px;
+}
+
+.bottomRow p{
+  text-align: center
 }
 
 /*sign in page*/
@@ -356,53 +407,6 @@ nav a:hover{
   margin-bottom: 10px;
 }
 
-/*middle section*/
-
-.middleSection {
-  background: rgb(11, 108, 235);
-  color: white;
-  height: 400px;
-  padding-top: 20px;
-}
-
-.middleLeftSection {
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.middleCenterSection {
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.middleRightSection {
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.middleSectionImage {
-  padding-bottom: 17px;
-}
-
-/*footer*/
-
-.topRow {
-  display: flex;
-  justify-content: center;
-  color: black;
-}
-
-.topRow p {
-  margin-left: 20px;
-}
-
-.bottomRow p{
-  text-align: center
-}
-
 /*user profile home*/
 
 .userProfileHeader {
@@ -420,17 +424,43 @@ nav a:hover{
   margin-bottom: 20px;
 }
 
-#profImageDiv {
+.profImageDiv {
+  position: absolute;
+  margin-top: -6px;
+  margin-left: -6px;
+  height: 132px;
+  width: 132px;
   background-color: rgb(255, 11, 125);
-  padding: 6px;
   border-radius: 50%;
+  z-index: -1;
+}
+
+.profImageDiv p {
+  color: white;
+  margin-top: 54px;
+  font-weight: bold;
 }
 
 .profImage {
+  position: relative;
   height: 120px;
   width: 120px; 
   border-radius: 50%;
 }
+
+.profImage:hover {
+  position: relative;
+  z-index: -2;
+}
+
+.userImageDiv {
+  position: relative;
+}
+
+.userImageDiv:hover .profImageDiv {
+  z-index: 3;
+}
+
 
 .userProfileHeader button {
   margin-top: 30px;
@@ -456,4 +486,23 @@ nav a:hover{
 
 .volOpp button {
   margin-top: 20px;
+}
+
+/*view opportunities page*/
+.oppsContainer {
+  background-color: rgb(49, 49, 49);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.singleOppHeader {
+  display: flex;
+  justify-content: center;
+}
+
+.singleOppHeader img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
 }

@@ -67,7 +67,11 @@ class HomePage extends Component {
 
         <div className="userProfileHeader">
         <h3 className="homeh2">Hello, {firebase.auth().currentUser.displayName}</h3>
-        <div id="profImageDiv"><img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage"/></div>
+        <Link className="navlink" to={routes.ACCOUNT}><div className="userImageDiv">
+          <div className="profImageDiv"><p className="text-center"> + Edit Profile</p></div>
+          <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage"/>
+        </div>
+        </Link>
         <Link to={routes.VIEW_OPPS}><button className="basicButtonYellow">Find Opportunities!</button></Link>
         </div>
                 {this.state.opportunities.map(opportunity => {
@@ -75,22 +79,22 @@ class HomePage extends Component {
                     <div className="volOppsSection">
                       <div className="volOpp" key={opportunity.id}>
                       <div className="row">
-                      <div className="col-sm-2">
+                      <div className="col-sm-2 text-center">
                         <Image src={opportunity.photoURL} alt="Image" placeholderColor="#313131" retry="noRetry"/>
                       </div>
-                      <div className="col-sm-2">
+                      <div className="col-sm-2 text-center">
                         <p>{opportunity.opportunityName}</p>
                       </div>
-                      <div className="col-sm-2">
+                      <div className="col-sm-2 text-center">
                         <p>{opportunity.date}</p>
                       </div>
                       <div className="col-sm-2">
                         <p>{opportunity.address}</p>
                       </div>
-                      <div className="col-sm-2">
+                      <div className="col-sm-2 text-center">
                         <p>{opportunity.category}</p>
                       </div>
-                      <div className="col-sm-2">
+                      <div className="col-sm-2 text-center">
                         <button className="basicButtonPink" onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
                       </div>
                       </div>
