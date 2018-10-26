@@ -5,9 +5,10 @@ import { PasswordForgetForm } from './PasswordForget';
 import PasswordChangeForm from './PasswordChange';
 import withAuthorization from './withAuthorization';
 import Navigation from './Navigation';
-
+import { Footer } from "./Footer";
 import ImageUpload from './ImageUpload'
 import * as firebase from 'firebase'
+import { faPrescription } from '@fortawesome/free-solid-svg-icons';
 
 //import "./Account.css";
 
@@ -33,10 +34,10 @@ const AccountPage = () =>
         <h4 className="accounth4">Need to change your password? Do that right here.</h4>
         <PasswordChangeForm />
       </div>
+      <Footer />
       </div>
     }
   </AuthUserContext.Consumer>
-
  
 
 const authCondition = (authUser) => !!authUser;

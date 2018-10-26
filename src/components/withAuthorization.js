@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import AuthUserContext from './AuthUserContext';
 import { firebase } from '../firebase';
 import * as routes from '../constants/routes';
+import { Footer } from "./Footer";
 
 const withAuthorization = (authCondition) => (Component) => {
   class WithAuthorization extends React.Component {

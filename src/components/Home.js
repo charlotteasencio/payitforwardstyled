@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import * as routes from "../constants/routes";
 import firebase from "firebase/app";
 import Image from "react-graceful-image";
+import { Footer } from "./Footer";
 
 //import "./Home.css";
 
@@ -69,14 +70,13 @@ class HomePage extends Component {
         <div id="profImageDiv"><img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage"/></div>
         <Link to={routes.VIEW_OPPS}><button className="basicButtonYellow">Find Opportunities!</button></Link>
         </div>
-          <div className="blueBackground">
                 {this.state.opportunities.map(opportunity => {
                   return (
                     <div className="volOppsSection">
                       <div className="volOpp" key={opportunity.id}>
                       <div className="row">
                       <div className="col-sm-2">
-                        <Image src={opportunity.photoURL} alt="Image" placeholderColor="#ffd518" retry="noRetry"/>
+                        <Image src={opportunity.photoURL} alt="Image" placeholderColor="#313131" retry="noRetry"/>
                       </div>
                       <div className="col-sm-2">
                         <p>{opportunity.opportunityName}</p>
@@ -98,7 +98,7 @@ class HomePage extends Component {
                   </div>
                          );
                   })}
-        </div>
+        <Footer />
       </div>
     );
   }
