@@ -21,7 +21,7 @@ const NavigationAuth = () =>
 <div>
   <nav className = "navbarAuthVol navbar-expand-sm navbar-light">
    <div className="navLeft">
-    <img src={Logo}></img>  
+     <Link className="navlink" to={routes.LANDING}><img className="logo" src={Logo}></img></Link>
     <div className="leftnavlink"><Link className="navlink" to={routes.LANDING}>Home</Link></div>
     <div className="leftnavlink"><Link className="navlink" to={routes.HOME}>Profile</Link></div>
     <div className="leftnavlink"><Link className="navlink" to={routes.ACCOUNT}>Account</Link></div>
@@ -34,7 +34,7 @@ const NavigationNonAuth = () =>
 <div>
   <nav className = "navbarNonAuth navbar-expand-sm navbar-light">
       <div>
-        <img src={Logo}></img>
+        <Link className="navlink" to={routes.LANDING}><img className="logo" src={Logo}></img></Link>
         <Link className="navlink" id="home" to={routes.LANDING}>PAY IT FORWARD</Link></div>
     <div className="navRight">
       <div><Link className="navlink" to={routes.SIGN_IN}><button className="pinkOutlineButton">Volunteer Sign In</button></Link></div>

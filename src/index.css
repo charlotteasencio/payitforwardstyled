@@ -15,6 +15,11 @@ textarea {
 
 /*navbar*/
 
+.logo:hover{
+  height: 51px;
+  width: 51px;
+}
+
 nav {
   background: white;
   padding: 20px 20px;
@@ -25,8 +30,12 @@ nav {
   justify-content: flex-start
 }
 
+.navLeft img {
+  margin-top: -20px;
+}
+
 .leftnavlink {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 nav a {
@@ -45,7 +54,7 @@ nav a:hover{
   border: 1px solid rgb(255, 213, 24);
   padding: 5px 30px;
   border-radius: 20px;
-  margin-top: -7px;
+  margin-top: -30px;
 }
 
 .navButton:hover {
