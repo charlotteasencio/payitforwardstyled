@@ -5,6 +5,7 @@ import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
 import * as routes from "../constants/routes";
 import firebase from "firebase/app";
+import Image from "react-graceful-image";
 
 //import "./Home.css";
 
@@ -75,7 +76,7 @@ class HomePage extends Component {
                       <div className="volOpp" key={opportunity.id}>
                       <div className="row">
                       <div className="col-sm-2">
-                        <img src={opportunity.photoURL || this.onerror()}/>
+                        <Image src={opportunity.photoURL} alt="Image" placeholderColor="#ffd518" retry="noRetry"/>
                       </div>
                       <div className="col-sm-2">
                         <p>{opportunity.opportunityName}</p>
