@@ -439,6 +439,7 @@ nav a:hover{
   color: white;
   margin-top: 54px;
   font-weight: bold;
+  font-size: 12px;
 }
 
 .profImage {
@@ -490,8 +491,8 @@ nav a:hover{
 
 /*view opportunities page*/
 .oppsContainer {
-  background-color: rgb(49, 49, 49);
-  color: white;
+  border:1px solid rgb(49, 49, 49);
+  color: black;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -499,16 +500,51 @@ nav a:hover{
 
 .singleOppHeader {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .singleOppHeader img {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   margin-right: 40px;
+  margin-top: -10px;
 }
 
 .singleOppHeader h5 {
-  margin-top: 20px;
+  margin-top: 10px;
+}
+
+.singleOppBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.icon {
+  margin-right: 15px;
+}
+
+.opportunityDescription {
+  margin-top: 15px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  padding: 50px;
+  max-width: 600px;
+}
+
+.descriptionDiv {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.opportunityInfo {
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
 }
