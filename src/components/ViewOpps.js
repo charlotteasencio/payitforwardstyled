@@ -80,7 +80,6 @@ class ViewOppsPage extends React.Component {
           <h5>Just click the sign up button and get volunteering.</h5>
         </div>
          <section className='display-opportunites'>
-          <div className="wrapper">
           {this.state.opportunities.map((opportunity) => {
           return (
             <div className="container oppsContainer"> 
@@ -119,7 +118,7 @@ class ViewOppsPage extends React.Component {
               </div>
                 )
               })}
-          </div>
+
       </section>
 
 </div>  
