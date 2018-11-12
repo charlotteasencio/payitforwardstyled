@@ -449,7 +449,7 @@ nav a:hover{
   border-radius: 50%;
 }
 
-.smallYellowCircle {
+.plusSign {
   background: rgb(255, 212, 25);
   position: absolute;
   margin-top: -35px;

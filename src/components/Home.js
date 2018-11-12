@@ -70,7 +70,7 @@ class HomePage extends Component {
         <Link className="navlink" to={routes.ACCOUNT}><div className="userImageDiv">
           <div className="profImageDiv"><p className="text-center"> + Edit Account</p></div>
           <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage"/>
-          <div className="smallYellowCircle">+</div>
+          <div className="plusSign">+</div>
         </div>
         </Link>
         <Link to={routes.VIEW_OPPS}><button className="basicButtonBlue">Find Opportunities!</button></Link>
