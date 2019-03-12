@@ -109,11 +109,7 @@ class ViewOppsPage extends React.Component {
                       <p className="opportunityDescription text-center">{opportunity.description}</p>
                     </div>
                   </div>
-                  <div className="row">
-                    <div className="col-sm-12 text-center">
                       <button className="basicButtonPink text-center" onClick={() => this.SignUpOpp(opportunity.opportunityName, opportunity.date, opportunity.description, opportunity.category, opportunity.address, opportunity.photoURL)}>Sign Up</button>
-                    </div>
-                  </div>
                 </div>
               </div>
                 )

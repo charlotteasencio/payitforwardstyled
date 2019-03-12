@@ -1,8 +1,8 @@
 import React from 'react';
 import Navigation from './Navigation';
-import Lightbulb from "./images/lightbulb.png"
-import Clipboard from "./images/clipboard.png"
-import Person from "./images/person.png"
+import Lightbulb from "./images/lightbulb.png";
+import Clipboard from "./images/clipboard.png";
+import Person from "./images/person.png";
 import { Collapsible } from "./Collapsible";
 import { Footer } from "./Footer.js";
 import { Collapsible2 } from "./Collapsible2";
@@ -24,7 +24,7 @@ const LandingPage = () =>
     <div className="row">
     <div className="col-sm-4">
       <div className="middleLeftSection">
-      <img className="middleSectionImage" src={Clipboard}></img>
+      <img className="middleSectionImage" alt="clipboard" src={Clipboard}></img>
         <h3>How it Works</h3>
         <p>Cupcake ipsum dolor sit amet chupa chups. Liquorice gummi bears halvah caramels liquorice. Pastry jujubes tiramisu cake cookie tiramisu gummies. Cake muffin 
           liquorice marshmallow oat cake sesame snaps sweet roll cookie liquorice. Candy canes powder macaroon biscuit pastry cake muffin soufflé. Gingerbread gingerbread 
@@ -33,7 +33,7 @@ const LandingPage = () =>
     </div>
     <div className="col-sm-4">
       <div className="middleCenterSection">
-        <img className="middleSectionImage" src={Person}></img>
+        <img className="middleSectionImage" alt="person" src={Person}></img>
         <h3>Where We Connect</h3>
         <p>Cupcake ipsum dolor sit amet chupa chups. Liquorice gummi bears halvah caramels liquorice. Pastry jujubes tiramisu cake cookie tiramisu gummies. Cake muffin 
           liquorice marshmallow oat cake sesame snaps sweet roll cookie liquorice. Candy canes powder macaroon biscuit pastry cake muffin soufflé. Gingerbread gingerbread 
@@ -42,7 +42,7 @@ const LandingPage = () =>
     </div>
     <div className="col-sm-4">
       <div className="middleRightSection">
-        <img className="middleSectionImage" src={Lightbulb}></img>
+        <img className="middleSectionImage" alt="lightbulb" src={Lightbulb}></img>
         <h3>Why Pay it Forward</h3>
         <p>Cupcake ipsum dolor sit amet chupa chups. Liquorice gummi bears halvah caramels liquorice. Pastry jujubes tiramisu cake cookie tiramisu gummies. Cake muffin 
           liquorice marshmallow oat cake sesame snaps sweet roll cookie liquorice. Candy canes powder macaroon biscuit pastry cake muffin soufflé. Gingerbread gingerbread 

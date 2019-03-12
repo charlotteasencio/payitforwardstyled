@@ -19,7 +19,7 @@ export class Collapsible extends Component {
 
     render() {
         const collapseState = (this.state.collapsed) ? "collapse" : "collapse show"
-        console.log(this.state)
+        //console.log(this.state)
         return (
             <div>
                 <div id="headingOne" className="collapsibleContent" onClick={this.handleCollapsible} data-toggle={collapseState} data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

@@ -13,25 +13,31 @@ textarea {
   padding: 3px;
 }
 
-/*navbar*/
+button {
+  cursor: pointer;
+}
 
-.logo:hover{
-  height: 51px;
-  width: 51px;
+/*navbar*/
+.menuButton {
+  float: right;
 }
 
 nav {
   background: white;
   padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+ul.navlinks {
+  margin: 0;
+  padding: 0;
 }
 
 .navLeft{
   display: flex;
   justify-content: flex-start
-}
-
-.navLeft img {
-  margin-top: -20px;
 }
 
 .leftnavlink {
@@ -48,43 +54,6 @@ nav a:hover{
   text-decoration: none;
   color: lightgray
 }
-
-.navButton {
-  background: rgb(255, 213, 24);
-  border: 1px solid rgb(255, 213, 24);
-  padding: 5px 30px;
-  border-radius: 20px;
-  margin-top: -30px;
-}
-
-.navButton:hover {
-  background: white;
-  border: 1px solid rgb(255, 213, 24);
-  color: rgb(255, 213, 24);
-  cursor: pointer;
-}
-
-.navButton:active {
-  box-shadow: 0 .5px rgb(49, 49, 49);
-  transform: translateY(2px);
-  border: 1px solid lightgrey;
-}
-
-.navButton:focus {
-  outline: 0;
-}
-
-.signOut{
-  display: flex;
-  justify-content: flex-end;
-  margin-top: -40px;
- }
- 
- .navRight {
-   display: flex;
-   justify-content: flex-end;
-   margin-top: -40px;
- }
 
  /*basic buttons*/
 
@@ -161,7 +130,6 @@ nav a:hover{
   color: rgb(255, 11, 125);
   padding: 5px 30px;
   border-radius: 20px;
-  margin-top: 10px;
 }
 
 .pinkOutlineButton:hover {
@@ -170,7 +138,6 @@ nav a:hover{
   color: white;
   padding: 5px 30px;
   border-radius: 20px;
-  margin-top: 10px;
 }
 
 .pinkOutlineButton:focus {
@@ -502,9 +469,10 @@ nav a:hover{
 }
 .oppsContainer {
   border:1px solid rgb(49, 49, 49);
-  color: black;
   padding: 10px;
   border-radius: 10px;
+  background: rgb(49, 49, 49);;
+  color: white;
 }
 
 .singleOppHeader {
@@ -534,8 +502,13 @@ nav a:hover{
   margin-top: 10px;
 }
 
+.singleOppBody button {
+  width: 200px;
+}
+
 .icon {
   margin-right: 15px;
+  color: rgb(11, 108, 235);
 }
 
 .opportunityDescription {
@@ -551,6 +524,9 @@ nav a:hover{
 }
 
 .opportunityInfo {
-  color: black;
+  color: white;
   text-align: start;
 }
+
+
+/*media queries*/

@@ -23,7 +23,7 @@ export class Collapsible2 extends Component {
         return (
             <div>
                 <div id="headingTwo" className="collapsibleContent" onClick={this.handleCollapsible} data-toggle={collapseState}  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <i class="fas fa-chevron-circle-down"></i>
+                    <i className="fas fa-chevron-circle-down"></i>
                     <h5>The Mission</h5>
                 </div>
                 <div id="collapseTwo" className={collapseState} aria-labelledby="headingTwo" data-parent="#accordionExample">
