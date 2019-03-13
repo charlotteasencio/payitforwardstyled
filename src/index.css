@@ -23,16 +23,26 @@ button {
 }
 
 nav {
-  background: white;
   padding: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-ul.navlinks {
+.navRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.navLinks {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: lightgray;
+  padding: 10px;
 }
 
 .navLeft{
@@ -40,19 +50,14 @@ ul.navlinks {
   justify-content: flex-start
 }
 
-.leftnavlink {
-  margin-top: 12px;
-}
-
-nav a {
+nav a{
   text-decoration: none;
   color: black;
-  padding: 20px;
 }
 
-nav a:hover{
+nav a:hover {
   text-decoration: none;
-  color: lightgray
+  color: rgb(11, 108, 235);
 }
 
  /*basic buttons*/

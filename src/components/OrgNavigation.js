@@ -18,28 +18,40 @@ const OrgNavigation = () =>
 
 const NavigationAuth = () =>
 <div>
-  <nav className = "navbarAuthOrg navbar-expand-sm navbar-light">
-  <div className="navLeft">
-    <Link className="link" to={routes.ORG_LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
-    <div className="leftnavlink"><Link className="link" to={routes.ORG_LANDING}>Home</Link></div>
-    <div className="leftnavlink"><Link className="link" to={routes.ORG_HOME}>Profile</Link></div>
-    <div className="leftnavlink"><Link className="link" to={routes.ORG_ACCOUNT}>My Account</Link></div>
-  </div>
-    <div className="signOut"><SignOutButton /></div>
+  <nav className="navbarNonAuth">
+      <div className="logoDiv">
+          <Link className="navlink" to={routes.LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
+          <Link className="navlink" id="home" to={routes.LANDING}>PAY IT FORWARD</Link>
+      </div>
+      <div className="navRight">
+        <div className="menuButton"><i className="fas fa-bars"></i></div>
+        <ul className="navLinks">
+          <div className="leftnavlink"><Link className="navlink" to={routes.LANDING}>Home</Link></div>
+          <div className="leftnavlink"><Link className="navlink" to={routes.HOME}>Profile</Link></div>
+          <div className="leftnavlink"><Link className="navlink" to={routes.ACCOUNT}>Account</Link></div>
+          <div className="signOut"><SignOutButton /></div>
+        </ul>
+      </div>
   </nav>
 </div>
 
 const NavigationNonAuth = () =>
+
 <div>
-  <nav className = "navbarNonAuth navbar-expand-sm navbar-light">
-    <div>
-    <Link className="link" to={routes.ORG_LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
-    <Link className="link" to={routes.LANDING}>PAY IT FORWARD</Link></div>
-  <div className="navRight">
-    <div><Link className="link" to={routes.SIGN_IN}><button className="pinkOutlineButton">Volunteer Sign In</button></Link></div>
-    <div><Link className="link" to={routes.ORG_SIGN_IN}><button className="pinkOutlineButton">Organization Sign In</button></Link></div>
-  </div>
+  <nav className="navbarNonAuth">
+      <div className="logoDiv">
+          <Link className="navlink" to={routes.LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
+          <Link className="navlink" id="home" to={routes.LANDING}>PAY IT FORWARD</Link>
+      </div>
+      <div className="navRight">
+        <div className="menuButton"><i className="fas fa-bars"></i></div>
+        <ul className="navLinks">
+          <Link className="navlink" to={routes.SIGN_IN}><li>Volunteer Sign In</li></Link>
+          <Link className="navlink" to={routes.ORG_SIGN_IN}><li>Organization Sign In</li></Link>
+        </ul>
+      </div>
   </nav>
 </div>
+
 
 export default OrgNavigation;
