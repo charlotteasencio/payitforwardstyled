@@ -14,54 +14,59 @@ export class NavigationAuth extends React.Component {
         this.state = {
             isOpen: false
         }
-        this.menuToggle = this.menuToggle.bind(this);
-        this.handleDocumentClick = this.handleDocumentClick.bind(this)
     }
 
-    componentDidMount() {
-        document.addEventListener('click', this.handleDocumentClick, false)
+    handleOpen = () => {
+        this.setState(
+            {isOpen: !this.state.isOpen}
+        )
+        console.log(this.state)
     }
 
-    componentWillUnmount() {
-        document.removeEventListener('click', this.handleDocumentClick, false)
-    }
+    // componentDidMount() {
+    //     document.addEventListener('click', this.handleDocumentClick, false)
+    // }
 
-    handleDocumentClick(e) {
-        if(!this.refs.root.contains(e.target) && this.state.isOpen === true) {
-            this.setState({
-                isOpen: false
-            })
-        }
-    }
+    // componentWillUnmount() {
+    //     document.removeEventListener('click', this.handleDocumentClick, false)
+    // }
 
-    menuToggle(e) {
-        e.stopPropagation()
-        this.setState({
-            isOpen: !this.state.isOpen
-        })
-    }
+    // handleDocumentClick() {
+    //     this.setState({
+    //         isOpen: false
+    //     })
+    //     console.log('test')
+    // }
+
+    // menuToggle(e) {
+    //     e.stopPropagation()
+    //     this.setState({
+    //         isOpen: !this.state.isOpen
+    //     })
+    // }
 
     render() {
-let menuStatus = this.state.isOpen ? 'isopen' : '';
+        //const collapseState = (this.state.collapsed) ? "collapse" : "collapse show"
+        let menuState = (this.state.isOpen) ? 'isopen' : 'isclosed';
 
-return (
-<div>
-   <nav className="navbarNonAuth">
-       <div className="logoDiv">
-           <Link className="navlink" to={routes.LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
-           <Link className="navlink" id="home" to={routes.LANDING}>PAY IT FORWARD</Link>
-       </div>
-       <div className="navRight">
-         <div className="menuButton" onClick={this.menuToggle}><i className="fas fa-bars"></i></div>
-         <ul className={ menuStatus }>
-           <Link className="navlink" to={routes.LANDING}>Home</Link>
-           <Link className="navlink" to={routes.HOME}>Profile</Link>
-           <Link className="navlink" to={routes.ACCOUNT}>Account</Link>
-           <div className="signOut"><SignOutButton /></div>
-         </ul>
-       </div>
-   </nav>
-</div>
-)
+        return (
+        <div>
+        <nav className="navbarNonAuth">
+            <div className="logoDiv">
+                <Link className="navlink" to={routes.LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
+                <Link className="navlink" id="home" to={routes.LANDING}>PAY IT FORWARD</Link>
+            </div>
+            <div className="navRight">
+                <div className="menuButton" onClick={this.handleOpen} data-toggle={menuState} ><i className="fas fa-bars"></i></div>
+                <ul className={menuState}>
+                    <Link className="navlink" to={routes.LANDING}>Home</Link>
+                    <Link className="navlink" to={routes.HOME}>Profile</Link>
+                    <Link className="navlink" to={routes.ACCOUNT}>Account</Link>
+                    <div className="signOut"><SignOutButton /></div>
+                </ul>
+            </div>
+        </nav>
+        </div>
+        )
     }
 }
