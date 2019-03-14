@@ -1,3 +1,53 @@
+/*RESET*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,6 +70,7 @@ button {
 /*navbar*/
 .menuButton {
   float: right;
+  font-size: 30px;
 }
 
 nav {
@@ -29,20 +80,41 @@ nav {
   align-items: flex-start;
 }
 
+.logo {
+  margin-right: 20px;
+}
+
 .navRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+#navLinks {
+  position: absolute;
+  z-index: 101;
+  margin-top: 30px;
+  margin-right: 30px;
+  width: 100%;
+}
+
+.styleNavLinks {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.navLinks {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  background: lightgray;
-  padding: 10px;
+html [type=button] {
+  -webkit-appearance: inherit;
+}
+
+#signOutButton {
+  cursor: pointer;
+}
+
+#signOutButton:hover {
+  color: rgb(255, 11, 125);
 }
 
 .navLeft{
@@ -58,6 +130,10 @@ nav a{
 nav a:hover {
   text-decoration: none;
   color: rgb(11, 108, 235);
+}
+
+nav a:focus {
+  outline: 0;
 }
 
  /*basic buttons*/
@@ -421,61 +497,51 @@ nav a:hover {
   border-radius: 50%;
 }
 
-.plusSign {
-  background: rgb(255, 212, 25);
-  position: absolute;
-  margin-top: -35px;
-  margin-left: 95px;
-  color: white;
-  font-size: 22px;
-  padding-left: 11px;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-
-.smallYellowCircle:hover {
-  z-index: -1;
-}
-
-.profImage:hover {
-  position: relative;
-  z-index: -2;
-}
-
 .userImageDiv {
   position: relative;
 }
-
-.userImageDiv:hover .profImageDiv {
-  z-index: 3;
-}
-
 
 .userProfileHeader button {
   margin-top: 40px;
 }
 
 .volOpp {
-  margin: 20px;
   background: rgb(48, 48, 48);
   color: white;
   border-radius: 10px;
+  margin: 10px;
+}
+
+.volOpp p {
+  margin-bottom: 0px;
+  width: 20%;
+  text-align: center;
 }
 
 .volOpp Img {
   height: 100px;
   width: 100px;
-  margin: 20px 0px 20px 20px;
   border-radius: 50%;
+  margin: 5px;
 }
 
-.volOpp p {
-  margin-top: 25px;
+.volOpp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.volOpp button {
-  margin-top: 20px;
+#oppText {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+#removeX {
+  margin: 5px;
 }
 
 /*view opportunities page*/
@@ -552,3 +618,22 @@ nav a:hover {
 
 
 /*media queries*/
+
+@media only screen and (max-width: 800px) {
+  .volOpp p {
+    margin-bottom: 0px;
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+  }
+
+  #oppText {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+  }
+
+}

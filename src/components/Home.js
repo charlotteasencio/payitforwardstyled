@@ -68,39 +68,23 @@ class HomePage extends Component {
         <div className="userProfileHeader">
         <h3 className="homeh2">Hello, {firebase.auth().currentUser.displayName}</h3>
         <Link className="navlink" to={routes.ACCOUNT}><div className="userImageDiv">
-          <div className="profImageDiv"><p className="text-center"> + Edit Account</p></div>
           <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage"/>
-          <div className="plusSign">+</div>
         </div>
         </Link>
         <Link to={routes.VIEW_OPPS}><button className="basicButtonBlue">Find Opportunities!</button></Link>
         </div>
                 {this.state.opportunities.map(opportunity => {
                   return (
-                    <div className="volOppsSection">
                       <div className="volOpp" key={opportunity.id}>
-                      <div className="row">
-                      <div className="col-sm-2 text-center">
+                        <div id="oppText">
                         <Image src={opportunity.photoURL} alt="Image" placeholderColor="#313131" retry="noRetry"/>
-                      </div>
-                      <div className="col-sm-2 text-center">
-                        <p>{opportunity.opportunityName}</p>
-                      </div>
-                      <div className="col-sm-2 text-center">
-                        <p>{opportunity.date}</p>
-                      </div>
-                      <div className="col-sm-2">
-                        <p>{opportunity.address}</p>
-                      </div>
-                      <div className="col-sm-2 text-center">
-                        <p>{opportunity.category}</p>
-                      </div>
-                      <div className="col-sm-2 text-center">
-                        <button className="basicButtonPink" onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
-                      </div>
-                      </div>
+                          <p>{opportunity.opportunityName}</p>
+                          <p>{opportunity.date}</p>
+                          <p>{opportunity.address}</p>
+                          <p>{opportunity.category}</p>
+                        </div>
+                        <i class="fas fa-times" id="removeX" onClick={() => this.removeOpportunity(opportunity.id)}></i>
                     </div>
-                  </div>
                          );
                   })}
         <Footer />

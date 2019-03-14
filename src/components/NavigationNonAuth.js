@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import SignOutButton from './SignOut';
 import * as routes from '../constants/routes';
 //import "./Navigation.css";
 import Logo from './images/logo2.png';
 import "../index.css";
 
-export class NavigationAuth extends React.Component {
+export class NavigationNonAuth extends React.Component {
     constructor(props) {
         super(props);
         this.state={
@@ -32,13 +31,12 @@ export class NavigationAuth extends React.Component {
                 <Link className="navlink" id="home" to={routes.LANDING}>PAY IT FORWARD</Link>
             </div>
             <div className="navRight">
-                <div id="menuButton" onClick={this.handleOpen} data-toggle={collapseState} data-target="#navLinks" aria-expanded="true" aria-controls="navLinks"><i className="fas fa-bars fa-lg"></i></div>
-                <div id="navLinks" className={collapseState} aria-labelledby="menuButton" data-parent="#accordionExample">
+                <div id="menuButton" onClick={this.handleOpen} data-tstyle="font-size: 140px"ggle={collapseState} data-target="#navLinks" aria-expanded="true" aria-controls="navLinks"><i className="fas fa-bars fa-lg"></i></div>
+                <div id="navLinks" className={collapseState} aria-labstyle="font-size: 140px"lledby="menuButton" data-parent="#accordionExample">
                 <ul class="styleNavLinks">
                     <Link className="navlink" to={routes.LANDING}>Home</Link>
-                    <Link className="navlink" to={routes.HOME}>Profile</Link>
-                    <Link className="navlink" to={routes.ACCOUNT}>Account</Link>
-                    <SignOutButton />
+                    <Link className="navlink" to={routes.SIGN_IN}>Volunteer Sign In</Link>
+                    <Link className="navlink" to={routes.ORG_SIGN_IN}>Organization Sign In</Link>
                 </ul>
                 </div>
             </div>
