@@ -35,7 +35,7 @@ export class NavigationAuth extends React.Component {
             <div className="navRight">
                 <div id="menuButton" onClick={this.handleOpen} data-toggle={collapseState} data-target="#navLinks" aria-expanded="true" aria-controls="navLinks"><i className="fas fa-bars fa-lg"></i></div>
                 <div id="navLinks" className={collapseState} aria-labelledby="menuButton" data-parent="#accordionExample">
-                <ul class="styleNavLinks">
+                <ul className="styleNavLinks">
                     <Link className="navlink" to={routes.LANDING}>Home</Link>
                     <Link className="navlink" to={routes.HOME}>Profile</Link>
                     <Link className="navlink" to={routes.ACCOUNT}>Account</Link>

@@ -482,6 +482,30 @@ nav a:focus {
   cursor: pointer;
 }
 
+/*Account Page*/
+.accountInfo {
+  display: flex;
+  justify-content: center;
+}
+
+.centerInfoDiv {
+  text-align: center;
+}
+
+/*Password*/
+.passwordForgetFormInput {
+  margin-right: 10px;
+}
+
+.passwordChangeInput {
+  margin-right: 10px;
+}
+
+.shortForm {
+  margin-bottom: 100px;
+}
+
+
 /*view opportunities page*/
 
 .display-opportunites {
