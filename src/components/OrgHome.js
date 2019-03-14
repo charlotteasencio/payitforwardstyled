@@ -64,16 +64,14 @@ class OrgHomePage extends Component {
         <h3>All Posted Opportunities</h3>
                     {this.state.opportunities.map((opportunity) => {
                       return (
-                        <div>
-                        <div key={opportunity.id}>
+                        <div className="volOpp" key={opportunity.id}>
                           <p>{opportunity.opportunityName}</p>
                           <p>{opportunity.date}</p>
                           <p>{opportunity.address}</p>
                           <p>{opportunity.timeframe}</p>
                           <p>{opportunity.description}</p>
                           <p>{opportunity.category}</p>
-                          <button className="basicButtonPink" onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
-                        </div>
+                          <i class="fas fa-times" id="removeX" onClick={() => this.removeOpportunity(opportunity.id)}></i>
                         </div>
                       );
                     })}
