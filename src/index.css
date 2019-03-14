@@ -4,6 +4,10 @@
   font-size: 30px;
 }
 
+.menuButton:focus {
+  outline: none;
+}
+
 nav {
   padding: 20px 20px;
   display: flex;
