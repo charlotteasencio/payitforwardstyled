@@ -93,23 +93,17 @@ class ViewOppsPage extends React.Component {
                         
                   </div>
                 <div className="singleOppBody">
-                  <div className="row">
-                    <div className="col-sm-4 text-center">
+                  <div id="oppInfo">
                       <p className="opportunityInfo"><FontAwesomeIcon  className="icon" icon={faCalendarAlt} />{opportunity.date}</p>
-                    </div>
-                    <div className="col-sm-4 text-center">
-                      <p className="opportunityInfo"><FontAwesomeIcon  className="icon" icon={faClock} />{opportunity.address}</p>
-                    </div>
-                    <div className="col-sm-4 text-center">
-                      <p className="opportunityInfo"><FontAwesomeIcon  className="icon" icon={faMapMarkerAlt} />{opportunity.timeframe}</p>
-                    </div>
+                      <p className="opportunityInfo"><FontAwesomeIcon  className="icon" icon={faMapMarkerAlt} />{opportunity.address}</p>
+                      <p className="opportunityInfo"><FontAwesomeIcon  className="icon" icon={faClock}/>{opportunity.timeframe}</p>
+                      <p className="opportunityDescription">{opportunity.description}</p>
                   </div>
                   <div className="row">
-                    <div className="col-sm-12 descriptionDiv">
-                      <p className="opportunityDescription text-center">{opportunity.description}</p>
+                    <div className="col-sm-12 text-center">
+                      <button className="basicButtonPink text-center" onClick={() => this.SignUpOpp(opportunity.opportunityName, opportunity.date, opportunity.description, opportunity.category, opportunity.address, opportunity.photoURL)}>Sign Up</button>
                     </div>
                   </div>
-                      <button className="basicButtonPink text-center" onClick={() => this.SignUpOpp(opportunity.opportunityName, opportunity.date, opportunity.description, opportunity.category, opportunity.address, opportunity.photoURL)}>Sign Up</button>
                 </div>
               </div>
                 )

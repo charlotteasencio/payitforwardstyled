@@ -59,28 +59,29 @@ class OrgHomePage extends Component {
         <h2 className="homeh2">Hello, {firebase.auth().currentUser.displayName}</h2>
         <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
         <Link to={routes.POST_OPPS}><button className="basicButtonBlue">Post an Opportunity</button></Link>
+        <h3 id="postedOppsTitle">All Posted Opportunities</h3>
         </div>
 
-        <h3>All Posted Opportunities</h3>
-                    {this.state.opportunities.map((opportunity) => {
-                      return (
-                        <div className="volOpp" key={opportunity.id}>
-                          <p>{opportunity.opportunityName}</p>
-                          <p>{opportunity.date}</p>
-                          <p>{opportunity.address}</p>
-                          <p>{opportunity.timeframe}</p>
-                          <p>{opportunity.description}</p>
-                          <p>{opportunity.category}</p>
-                          <i class="fas fa-times" id="removeX" onClick={() => this.removeOpportunity(opportunity.id)}></i>
-                        </div>
-                      );
-                    })}
-          </div>
+
+          {this.state.opportunities.map((opportunity) => {
+            return (
+              <div className="volOpp" key={opportunity.id}>
+                  <div id="oppText">
+                      <p>{opportunity.opportunityName}</p>
+                      <p>{opportunity.date}</p>
+                      <p>{opportunity.address}</p>
+                      <p>{opportunity.timeframe}</p>
+                      <p>{opportunity.description}</p>
+                      <p>{opportunity.category}</p>
+                    </div>
+                    <i class="fas fa-times" id="removeX" onClick={() => this.removeOpportunity(opportunity.id)}></i>
+              </div>
+            );
+          })}
+      </div>
     );
   }
 }
-
-
 
 const authCondition = (authUser) => !!authUser;
 
