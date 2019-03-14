@@ -6,6 +6,7 @@ import * as routes from '../constants/routes';
 //import "./Navigation.css";
 import Logo from './images/logo2.png';
 import "../index.css";
+import { Transition } from 'react-transition-group';
 
 export class NavigationAuth extends React.Component {
     constructor(props) {

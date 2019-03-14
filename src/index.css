@@ -193,11 +193,10 @@ nav a:focus {
   background: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.landingTopSection h2 {
-  margin-top: 140px;
+  text-align: center;
+  margin: 0px 10px;
 }
 
 #getInvolvedButton {
@@ -568,5 +567,15 @@ nav a:focus {
     align-items: center;
     margin: 20px;
   }
+
+  /*footer*/
+
+.topRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
 
 }
