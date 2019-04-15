@@ -9,6 +9,7 @@
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
     "firebase": "^5.3.1",
+    "heroku": "^7.22.9",
     "i": "^0.3.6",
     "npm": "^6.9.0",
     "re-base": "^4.0.0",

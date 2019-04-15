@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 //import "./Collapsible.css";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export class Collapsible extends Component {
     constructor(){
         super()
         this.state={
-            collapsed: true
+            collapsed: true,
+            isOpen: false
         }
     }
 
     handleCollapsible = () => {
-        this.setState(
-            {collapsed: !this.state.collapsed}
-        )
+        this.setState({
+            collapsed: !this.state.collapsed,
+            isOpen: !this.state.isOpen
+        })
     }
 
 
@@ -23,7 +26,10 @@ export class Collapsible extends Component {
         return (
             <div>
                 <div id="headingOne" className="collapsibleContent" onClick={this.handleCollapsible} data-toggle={collapseState} data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <i className="fas fa-chevron-circle-down"></i>
+                { this.state.isOpen
+                    ? <FontAwesomeIcon icon="chevron-circle-up" className="fa-med arrow"/>
+                    : <FontAwesomeIcon icon="chevron-circle-down" className="fa-med arrow"/>
+                }
                     <h5>About Us</h5>
                 </div>
                 <div id="collapseOne" className={collapseState} aria-labelledby="headingOne" data-parent="#accordionExample">

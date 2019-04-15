@@ -299,6 +299,12 @@ nav a:focus {
   margin-top: 20px;
 }
 
+.arrow {
+  color: rgb(255, 11, 125);
+  margin-left: 20px;
+  margin-top: 23px;
+}
+
 /*footer*/
 
 .topRow {
