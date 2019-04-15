@@ -24,6 +24,12 @@ import ViewOppsPage from './ViewOpps'
 import * as routes from '../constants/routes';
 import withAuthentication from './withAuthentication';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faBars)
+library.add(faTimes)
+
 const App = () =>
   <Router>
     <div>

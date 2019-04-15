@@ -63,10 +63,6 @@ class PostOppForm extends Component {
             address,
             description,
             category,
-            uid,
-            photoURL
-
-
         } = this.state;
 
         const {
@@ -99,7 +95,6 @@ class PostOppForm extends Component {
             address,
             description,
             category,
-            uid,
             error
         } = this.state;
 

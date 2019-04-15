@@ -1,7 +1,4 @@
 import { db } from './firebase';
-import firebase from 'firebase/app'
-import AuthUserContext from '../components/AuthUserContext';
-import React from 'react';
 
 // User API
 

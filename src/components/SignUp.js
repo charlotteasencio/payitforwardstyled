@@ -11,7 +11,6 @@ import * as routes from '../constants/routes';
 
 import { auth, db } from '../firebase';
 import Navigation from './Navigation';
-import ImageUpload from './ImageUpload'
 
 //import "./SignUp.css";
 

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-//import React from 'react';
+import React from 'react';
 import withAuthorization from './withAuthorization';
 
 //import "./ViewOpps.css";
@@ -86,7 +85,7 @@ class ViewOppsPage extends React.Component {
                   <div key={opportunity.id}>
                     <div className="row">
                       <div className="col-sm-12 text-center singleOppHeader"> 
-                          <img src={opportunity.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} />
+                          <img alt="opportunity" src={opportunity.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} />
                           <h5 className="opportunityName">{opportunity.opportunityName}</h5>
                       </div> 
                     </div>    

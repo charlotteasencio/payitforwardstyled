@@ -50,7 +50,7 @@ class HomePage extends Component {
     var user = firebase.auth().currentUser;
     const oppRef = firebase
       .database()
-      .ref("/users/" + user.uid + "/myopportunities/" + `${opportunityId}`);
+      .ref("/users/" + user.uid + "/myopportunities/" + opportunityId);
     oppRef.remove();
   }
 
@@ -77,13 +77,13 @@ class HomePage extends Component {
                   return (
                       <div className="volOpp" key={opportunity.id}>
                         <div id="oppText">
-                        <Image src={opportunity.photoURL} alt="Image" placeholderColor="#313131" retry="noRetry"/>
+                        <Image src={opportunity.photoURL} alt="Image" placeholderColor="#313131"/>
                           <p>{opportunity.opportunityName}</p>
                           <p>{opportunity.date}</p>
                           <p>{opportunity.address}</p>
                           <p>{opportunity.category}</p>
                         </div>
-                        <i class="fas fa-times" id="removeX" onClick={() => this.removeOpportunity(opportunity.id)}></i>
+                        <i className="fas fa-times" id="removeX" onClick={() => this.removeOpportunity(opportunity.id)}></i>
                     </div>
                          );
                   })}

@@ -8,7 +8,6 @@ import Navigation from './Navigation';
 import { Footer } from "./Footer";
 import ImageUpload from './ImageUpload'
 import * as firebase from 'firebase'
-import { faPrescription } from '@fortawesome/free-solid-svg-icons';
 
 const AccountPage = () =>
 
