@@ -668,7 +668,7 @@ nav a:focus {
     transition: 3s
   }
   
-  .styleNavLinks.navlink {
-    margin-right: 10px;
+  .styleNavLinks .navlink:not(:last-of-type){
+    border-right: none;
   }
 }
