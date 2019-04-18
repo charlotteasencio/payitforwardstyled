@@ -44,7 +44,7 @@ class ImageUpload extends Component {
 
         });
     } else {
-        alert("Please choose and image first")
+        alert("Please choose an image first")
     }
         
     }
