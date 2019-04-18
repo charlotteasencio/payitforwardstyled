@@ -15,10 +15,10 @@ import * as firebase from 'firebase'
 const OrgAccountPage = () =>
   <AuthUserContext.Consumer>
     {authUser =>
-      <div>
+      <div className="accountInfo">>
         <OrgNavigation />
-        <div className="parallax">
-        <h2 className="accounth2">Thanks for partnering <br></br> with us!</h2>
+        <div className="centerInfoDiv">
+        <h2 className="accounth2">Thanks for partnering with us!</h2>
         <h5 className="accounth5">View and edit your account information below.</h5>
         <p className="accountP">Email: {authUser.email}</p>
         <p className="accountP">Organization: {authUser.displayName}</p>
