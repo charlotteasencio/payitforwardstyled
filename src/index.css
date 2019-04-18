@@ -43,10 +43,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 48px;
   width: 100%;
   height: 100%;
-  transition: 3s
+  margin-top: 5px;
 }
 
 .styleNavLinks .navlink {
