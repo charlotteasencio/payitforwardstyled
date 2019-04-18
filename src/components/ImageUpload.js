@@ -21,6 +21,7 @@ class ImageUpload extends Component {
 
     handleUpload = () => {
         const {image} = this.state;
+        if(this.state.image !== null) {
         const uploadTask = firebase.storage().ref(`images/${image.name}`).put(image)
         uploadTask.on('state_changed',
          (snapshot) => {
@@ -34,14 +35,17 @@ class ImageUpload extends Component {
          () => {
              firebase.storage().ref('images').child(image.name).getDownloadURL().then(photoURL => {
                  console.log("photo", photoURL)
-                 this.setState({photoURL: photoURL})
+                 this.setState({photoURL})
                  firebase.auth().currentUser.updateProfile({ photoURL: photoURL })
-                 //window.location.reload();
+                 window.location.reload();
              })
              
             //complete function
-            
+
         });
+    } else {
+        alert("Please choose and image first")
+    }
         
     }
     render(){

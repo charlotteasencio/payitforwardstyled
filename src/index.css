@@ -56,10 +56,6 @@ nav {
   border-right: 1px solid gray;
 }
 
-.styleNavLinks .navlink:last-of-type {
-  margin-right: 20px;
-}
-
 .menu {
   cursor: pointer;
 }
