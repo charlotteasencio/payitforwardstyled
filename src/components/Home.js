@@ -66,7 +66,6 @@ class HomePage extends Component {
         <Navigation />
 
         <div className="userProfileHeader">
-        <h3 className="homeh2">Hello, {firebase.auth().currentUser.displayName}</h3>
         <Link className="navlink" to={routes.ACCOUNT}><div className="userImageDiv">
           <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage"/>
         </div>

@@ -21,7 +21,6 @@ const AccountPage = () =>
             <h2>Thanks for partnering with us!</h2>
             <h5>View and edit your account information below.</h5>
               <p>Email: {authUser.email}</p>
-              <p>User Name: {authUser.displayName}</p>
               <p>Profile Photo:</p>
               <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
             

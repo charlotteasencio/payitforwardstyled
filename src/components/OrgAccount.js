@@ -21,7 +21,6 @@ const OrgAccountPage = () =>
         <h2 className="accounth2">Thanks for partnering with us!</h2>
         <h5 className="accounth5">View and edit your account information below.</h5>
         <p className="accountP">Email: {authUser.email}</p>
-        <p className="accountP">Organization: {authUser.displayName}</p>
        <p className="profileImg">Profile Photo:</p>
         <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
         <div>

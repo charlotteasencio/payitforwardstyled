@@ -56,7 +56,6 @@ class OrgHomePage extends Component {
       <div>
         <OrgNavigation />
         <div className="userProfileHeader">
-        <h2 className="homeh2">Hello, {firebase.auth().currentUser.displayName}</h2>
         <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
         <Link to={routes.POST_OPPS}><button className="basicButtonBlue">Post an Opportunity</button></Link>
         <h3 id="postedOppsTitle">All Posted Opportunities</h3>

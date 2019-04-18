@@ -33,10 +33,10 @@ class ImageUpload extends Component {
          }, 
          () => {
              firebase.storage().ref('images').child(image.name).getDownloadURL().then(photoURL => {
-                 console.log(photoURL)
-                 this.setState({photoURL})
+                 console.log("photo", photoURL)
+                 this.setState({photoURL: photoURL})
                  firebase.auth().currentUser.updateProfile({ photoURL: photoURL })
-                 window.location.reload();
+                 //window.location.reload();
              })
              
             //complete function
