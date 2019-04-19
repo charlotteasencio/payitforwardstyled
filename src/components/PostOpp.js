@@ -16,8 +16,8 @@ import { db } from '../firebase';
 const PostOppPage = ({ history }) =>
     <div>
         <OrgNavigation />
-        <div className="parallax">
-        <h2 className="postOppsh2">Need volunteers? <br></br> We've got you covered.</h2>
+        <div className="centerDiv">
+        <h2 className="postOppsh2">Need volunteers? We've got you covered.</h2>
         <h5 className="postOppsh5">Post your organization's opportunities below.</h5>
         <PostOppForm history={history} />
         </div>
@@ -108,33 +108,21 @@ class PostOppForm extends Component {
             category === 'default';
 
         return (
-
-               <div className="container pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center postOpps">
-                <form onSubmit={this.onSubmit}>
-                <div className="row">
-                <div className="col-sm-12">
+                <form id="postOppForm" onSubmit={this.onSubmit}>
                         <input
                             value={opportunityName}
                             onChange={event => this.setState(byPropKey('opportunityName', event.target.value))}
                             type="text"
                             placeholder="Opportunity name"
                             className="postOppsInput"
-                        />     
-                </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-12">         
+                        />          
                         <input
                             value={date}
                             onChange={event => this.setState(byPropKey('date', event.target.value))}
                             type="date"
                             placeholder="Date"
                             className="postOppsInput"
-                        />
-                </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-12">            
+                        />     
                         <input
                             value={numberOfVolunteers}
                             onChange={event => this.setState(byPropKey('numberOfVolunteers', event.target.value))}
@@ -142,10 +130,6 @@ class PostOppForm extends Component {
                             placeholder="Number of volunteers"
                             className="postOppsInput"
                         />
-                </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-12">    
                         <input
                             value={timeframe}
                             onChange={event => this.setState(byPropKey('timeframe', event.target.value))}
@@ -153,10 +137,6 @@ class PostOppForm extends Component {
                             placeholder="Time"
                             className="postOppsInput"
                         />
-                </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-12">    
                         <input
                             value={address}
                             onChange={event => this.setState(byPropKey('address', event.target.value))}
@@ -164,21 +144,14 @@ class PostOppForm extends Component {
                             placeholder="Address"
                             className="postOppsInput"
                         />
-                </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-12">    
                         <input
                             value={description}
                             onChange={event => this.setState(byPropKey('description', event.target.value))}
                             type="text"
                             placeholder="Event description"
                             className="postOppsInput"
-                        />
-                </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-12">    
+                        /> 
+                        <div>
                     Category:
                         <select value={category} className="postOppsSelect" onChange={ event => this.setState(byPropKey('category', event.target.value))}>
                             <option value="default">Please select one...</option>
@@ -191,20 +164,14 @@ class PostOppForm extends Component {
                             <option value="Seniors">Seniors</option>
                             <option value="Teens">Teens</option>
                             <option value="Other">Other</option>
-                        </select>
+                        </select>  
                         </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-12">    
                         <button disabled={isInvalid} type="submit" className="postOppButton">
                             Add Opportunity
-                        </button>
-                        </div>
-                </div>         
+                        </button>       
 
                     {error && <p>{error.message}</p>}
                 </form>
-            </div>    
         );
     }
 }

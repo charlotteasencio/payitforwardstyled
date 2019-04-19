@@ -516,10 +516,6 @@ nav a:focus {
 }
 
 /*Account Page*/
-.accountInfo {
-  display: flex;
-  justify-content: center;
-}
 
 .centerInfoDiv {
   text-align: center;
@@ -536,6 +532,25 @@ nav a:focus {
 
 .shortForm {
   margin-bottom: 100px;
+}
+
+/*post opps page*/
+.centerDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#postOppForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#postOppForm input, #postOppForm button, .postOppsSelect {
+  margin-top: 10px;
 }
 
 

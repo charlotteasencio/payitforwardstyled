@@ -15,7 +15,7 @@ import * as firebase from 'firebase'
 const OrgAccountPage = () =>
   <AuthUserContext.Consumer>
     {authUser =>
-      <div className="accountInfo">>
+      <div className="accountInfo">
         <OrgNavigation />
         <div className="centerInfoDiv">
         <h2 className="accounth2">Thanks for partnering with us!</h2>
