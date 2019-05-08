@@ -12,17 +12,18 @@ export class NavigationNonAuth extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-            collapsed: true,
-            isOpen: false
+             collapsed: true,
+             isOpen: false
         }
     }
 
     handleOpen = () => {
-        this.setState({
-            collapsed: !this.state.collapsed,
-            isOpen: !this.state.isOpen
+         this.setState({
+             collapsed: !this.state.collapsed,
+             isOpen: !this.state.isOpen
         })
-    }
+     }
+
 
     render() {
         const collapseState = (this.state.collapsed) ? "collapse" : "collapse show"
@@ -49,6 +50,19 @@ export class NavigationNonAuth extends React.Component {
                     <Link className="navlink" to={routes.SIGN_IN}>Volunteer Sign In</Link>
                     <Link className="navlink" to={routes.ORG_SIGN_IN}>Organization Sign In</Link>
                 </div>
+                </div>
+            </div>
+        </nav>
+        <nav className="navbarNonAuthLargeScreen">
+            <div className="logoDiv">
+                <Link className="navlink" to={routes.LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
+                <Link className="navlink" id="home" to={routes.LANDING}>PAY IT FORWARD</Link>
+            </div>
+            <div className="navRight">
+                <div className="styleNavLinks">
+                    <Link className="navlink" to={routes.LANDING}>Home</Link>
+                    <Link className="navlink" to={routes.SIGN_IN}>Volunteer Sign In</Link>
+                    <Link className="navlink" to={routes.ORG_SIGN_IN}>Organization Sign In</Link>
                 </div>
             </div>
         </nav>

@@ -52,6 +52,20 @@ export class OrgNavAuth extends React.Component {
                 </div>
             </div>
         </nav>
+        <nav className="navbarNonAuthLargeScreen">
+            <div className="logoDiv">
+                <Link className="navlink" to={routes.ORG_LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
+                <Link className="navlink" id="home" to={routes.ORG_LANDING}>PAY IT FORWARD</Link>
+            </div>
+            <div className="navRight">
+                <div className="styleNavLinks">
+                    <Link className="navlink" to={routes.ORG_LANDING}>Home</Link>
+                    <Link className="navlink" to={routes.ORG_HOME}>Profile</Link>
+                    <Link className="navlink" to={routes.ORG_ACCOUNT}>Account</Link>
+                    <SignOutButton />
+                </div>
+            </div>
+        </nav>
         </div>
         )
     }

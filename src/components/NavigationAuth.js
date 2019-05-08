@@ -20,8 +20,8 @@ export class NavigationAuth extends React.Component {
 
     handleOpen = () => {
         this.setState({
-            collapsed: !this.state.collapsed,
-            isOpen: !this.state.isOpen
+        collapsed: !this.state.collapsed,
+        isOpen: !this.state.isOpen
         })
     }
 
@@ -49,6 +49,20 @@ export class NavigationAuth extends React.Component {
                     <Link className="navlink" to={routes.ACCOUNT}>Account</Link>
                     <SignOutButton />
                 </div>
+                </div>
+            </div>
+        </nav>
+        <nav className="navbarNonAuthLargeScreen">
+            <div className="logoDiv">
+                <Link className="navlink" to={routes.LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
+                <Link className="navlink" id="home" to={routes.LANDING}>PAY IT FORWARD</Link>
+            </div>
+            <div className="navRight">
+                <div className="styleNavLinks">
+                    <Link className="navlink" to={routes.LANDING}>Home</Link>
+                    <Link className="navlink" to={routes.HOME}>Profile</Link>
+                    <Link className="navlink" to={routes.ACCOUNT}>Account</Link>
+                    <SignOutButton />
                 </div>
             </div>
         </nav>

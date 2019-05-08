@@ -1,4 +1,13 @@
 /*navbar*/
+
+.navbarNonAuthLargeScreen {
+  display: flex;
+}
+
+.navbarNonAuth {
+  display: none;
+}
+
 #menuButton {
   float: right;
   position: relative;
@@ -21,6 +30,7 @@ nav {
   flex-direction: column;
   align-items: flex-end;
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 .navlink {
@@ -33,10 +43,6 @@ nav {
   z-index: 100;
   right: 10px;
   position: absolute;
-  top: 15px;
-  background: rgb(231, 231, 231);
-  -webkit-box-shadow: -3px 3px 6px #ccc;
-  box-shadow: -3px 3px 6px #ccc;
 }
 
 .styleNavLinks {
@@ -45,15 +51,10 @@ nav {
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-top: 5px;
 }
 
 .styleNavLinks .navlink {
   padding: 0 10px;
-}
-
-.styleNavLinks .navlink:not(:last-of-type) {
-  border-right: 1px solid gray;
 }
 
 .menu {
@@ -655,7 +656,7 @@ nav a:focus {
 
 }
 
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 800px) { 
   .signUpForm input {
     width: 90%;
   }
@@ -685,4 +686,13 @@ nav a:focus {
   .styleNavLinks .navlink:not(:last-of-type){
     border-right: none;
   }
+
+  .navbarNonAuthLargeScreen {
+    display: none;
+  }
+
+  .navbarNonAuth {
+    display: flex;
+  }
+
 }
