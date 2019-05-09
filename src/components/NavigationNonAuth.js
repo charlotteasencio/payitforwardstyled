@@ -8,6 +8,7 @@ import "../index.css";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+
 export class NavigationNonAuth extends React.Component {
     constructor(props) {
         super(props);

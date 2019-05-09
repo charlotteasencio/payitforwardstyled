@@ -8,6 +8,10 @@
   display: none;
 }
 
+.navLinksSmallScreen {
+  margin-right: -300px;
+}
+
 #menuButton {
   float: right;
   position: relative;
@@ -296,23 +300,11 @@ nav a:focus {
   padding-bottom: 20px;
 }
 
-#collapseOne p {
-  padding-left: 30px;
-  padding-right: 100px;
+#collapseOne p, #collapseTwo p, #collapseThree p {
+  padding: 10px 30px;
   margin-top: 20px;
 }
 
-#collapseTwo p {
-  margin-left: 30px;
-  margin-right: 100px;
-  margin-top: 20px;
-}
-
-#collapseThree{
-  margin-left: 30px;
-  margin-right: 100px;
-  margin-top: 20px;
-}
 
 #collapseFour form {
   margin-left: 30px;
@@ -345,7 +337,11 @@ nav a:focus {
 /*sign in page*/
 
 .signInSection{
-  margin-top: 200px;
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .signInHeader {
