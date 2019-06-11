@@ -1,0 +1,17 @@
+.centerDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #postOppForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #postOppForm input, #postOppForm button, .postOppsSelect {
+    margin-top: 10px;
+  }

@@ -30,7 +30,7 @@ export class NavigationNonAuth extends React.Component {
         const collapseState = (this.state.collapsed) ? "collapse" : "collapse show"
 
         return (
-        <div>
+        <div className="fullNavbar">
         <nav className="navbarNonAuth">
             <div className="logoDiv">
                 <Link className="navlink" to={routes.LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>

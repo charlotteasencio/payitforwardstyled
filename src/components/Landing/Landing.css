@@ -1,0 +1,96 @@
+.landingTopSection {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px 10px;
+}
+
+#getInvolvedButton {
+  margin-top: 50px;
+}
+
+/*middle section*/
+
+.middleSection {
+  background: rgb(11, 108, 235);
+  color: white;
+  padding: 3% 0px;
+  margin-bottom: 2%;
+}
+
+.middleLeftSection {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.middleCenterSection {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.middleRightSection {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.middleSectionImage {
+  padding-bottom: 17px;
+}
+
+/*collapsible*/
+
+.collapsibleSection {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+.collapsibleContent {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 20px;
+  box-shadow: -2px 5px 5px lightgray;
+}
+
+.collapsibleContent h5 {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.collapsibleContent i {
+  color: rgb(255, 11, 125);
+  margin-top: 3px;
+  margin-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#collapseOne p, #collapseTwo p, #collapseThree p {
+  padding: 10px 30px;
+  margin-top: 20px;
+}
+
+
+#collapseFour form {
+  margin-left: 30px;
+  margin-right: 40%;
+  margin-top: 20px;
+}
+
+.arrow {
+  color: rgb(255, 11, 125);
+  margin-left: 20px;
+  margin-top: 23px;
+}

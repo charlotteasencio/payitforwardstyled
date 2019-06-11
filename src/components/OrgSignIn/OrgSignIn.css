@@ -1,0 +1,42 @@
+.signInSection{
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .signInHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding-top: 10px;
+  }
+  
+  .signInForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signInForm input {
+    width: 400px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .signUpLink {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color: black;
+  }
+  
+  .forgotPasswordLink {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }

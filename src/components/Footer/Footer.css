@@ -1,0 +1,13 @@
+.topRow {
+    display: flex;
+    justify-content: center;
+    color: black;
+  }
+  
+  .topRow p {
+    margin-left: 20px;
+  }
+  
+  .bottomRow p{
+    text-align: center
+  }

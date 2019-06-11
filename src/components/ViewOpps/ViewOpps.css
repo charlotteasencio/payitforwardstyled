@@ -1,0 +1,70 @@
+
+.display-opportunites {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+    row-gap: 10px;
+    column-gap: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+  .oppsContainer {
+    border:1px solid rgb(49, 49, 49);
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(49, 49, 49);;
+    color: white;
+  }
+  
+  .singleOppHeader {
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .singleOppHeader img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 40px;
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+  
+  .singleOppHeader h5 {
+    margin-top: 10px;
+  }
+  
+  .singleOppBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .singleOppBody button {
+    width: 200px;
+  }
+  
+  .icon {
+    margin-right: 15px;
+    color: rgb(11, 108, 235);
+  }
+  
+  .descriptionDiv {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .opportunityInfo {
+    color: white;
+    text-align: start;
+  }
+  
+  #oppInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+  }

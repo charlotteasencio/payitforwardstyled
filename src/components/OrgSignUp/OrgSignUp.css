@@ -1,0 +1,41 @@
+
+.signUpSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 40px);
+  }
+  
+  .signUpHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding-top: 10px;
+  }
+  
+  .signUpForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signUpForm input {
+    width: 400px;
+    height: 34px;
+    border-radius: 5px;
+    border: 1px solid #a9a9a9;
+    border-bottom: 1px solid darkgray;
+    margin-bottom: 10px;
+  }
+  
+  .signUpForm textarea {
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+    margin-bottom: 10px;
+  }

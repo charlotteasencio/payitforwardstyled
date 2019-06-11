@@ -5,21 +5,21 @@ import {
   Route,
 } from 'react-router-dom';
 
-import LandingPage from './Landing';
-import SignUpPage from './SignUp';
-import SignInPage from './SignIn';
-import PasswordForgetPage from './PasswordForget';
-import HomePage from './Home';
-import AccountPage from './Account';
+import LandingPage from './Landing/Landing';
+import SignUpPage from './SignUp/SignUp';
+import SignInPage from './SignIn/SignIn';
+import PasswordForgetPage from './PasswordForget/PasswordForget';
+import HomePage from './Home/Home';
+import AccountPage from './Account/Account';
 
-import OrgSignUpPage from './OrgSignUp';
-import OrgSignInPage from './OrgSignIn';
-import OrgAccountPage from './OrgAccount';
-import OrgHomePage from './OrgHome';
-import OrgLandingPage from './OrgLanding';
+import OrgSignUpPage from './OrgSignUp/OrgSignUp';
+import OrgSignInPage from './OrgSignIn/OrgSignIn';
+import OrgAccountPage from './OrgAccount/OrgAccount';
+import OrgHomePage from './OrgHome/OrgHome';
+import OrgLandingPage from './OrgLanding/OrgLanding';
 
-import PostOppPage from './PostOpp'
-import ViewOppsPage from './ViewOpps' 
+import PostOppPage from './PostOpp/PostOpp'
+import ViewOppsPage from './ViewOpps/ViewOpps' 
 
 import * as routes from '../constants/routes';
 import withAuthentication from './withAuthentication';
