@@ -74,7 +74,7 @@ class OrgHomePage extends Component {
                       <p>{opportunity.description}</p>
                       <p>{opportunity.category}</p>
                     </div>
-                    <i class="fas fa-times" id="removeX" onClick={() => this.removeOpportunity(opportunity.id)}></i>
+                    <i className="fas fa-times" id="removeX" onClick={() => this.removeOpportunity(opportunity.id)}></i>
               </div>
             );
           })}

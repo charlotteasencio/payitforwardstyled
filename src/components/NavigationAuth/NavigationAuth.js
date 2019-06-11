@@ -3,13 +3,11 @@ import { Link } from 'react-router-dom';
 
 import SignOutButton from '../SignOut/SignOut';
 import * as routes from '../../constants/routes';
-//import "./Navigation.css";
 import Logo from '../images/logo2.png';
-import "./OrgNavAuth.css"
-
+import "./NavigationAuth.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export class OrgNavAuth extends React.Component {
+export class NavigationAuth extends React.Component {
     constructor(props) {
         super(props);
         this.state={
@@ -20,8 +18,8 @@ export class OrgNavAuth extends React.Component {
 
     handleOpen = () => {
         this.setState({
-            collapsed: !this.state.collapsed,
-            isOpen: !this.state.isOpen
+        collapsed: !this.state.collapsed,
+        isOpen: !this.state.isOpen
         })
     }
 
@@ -29,11 +27,11 @@ export class OrgNavAuth extends React.Component {
         const collapseState = (this.state.collapsed) ? "collapse" : "collapse show"
 
         return (
-        <div className="fullNavbar">
+        <div>
         <nav className="navbarNonAuth">
             <div className="logoDiv">
-                <Link className="navlink" to={routes.ORG_LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
-                <Link className="navlink" id="home" to={routes.ORG_LANDING}>PAY IT FORWARD</Link>
+                <Link className="navlink" to={routes.LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
+                <Link className="navlink" id="home" to={routes.LANDING}>PAY IT FORWARD</Link>
             </div>
             <div className="navRight">
                 <div id="menuButton" onClick={this.handleOpen} data-toggle={collapseState} data-target="#navLinks" aria-expanded="true" aria-controls="navLinks">
@@ -44,9 +42,9 @@ export class OrgNavAuth extends React.Component {
                 </div>
                 <div id="navLinks" className={collapseState} aria-labelledby="menuButton" data-parent="#accordionExample">
                 <div className="styleNavLinks">
-                    <Link className="navlink" to={routes.ORG_LANDING}>Home</Link>
-                    <Link className="navlink" to={routes.ORG_HOME}>Profile</Link>
-                    <Link className="navlink" to={routes.ORG_ACCOUNT}>Account</Link>
+                    <Link className="navlink" to={routes.LANDING}>Home</Link>
+                    <Link className="navlink" to={routes.HOME}>Profile</Link>
+                    <Link className="navlink" to={routes.ACCOUNT}>Account</Link>
                     <SignOutButton />
                 </div>
                 </div>
@@ -54,14 +52,14 @@ export class OrgNavAuth extends React.Component {
         </nav>
         <nav className="navbarNonAuthLargeScreen">
             <div className="logoDiv">
-                <Link className="navlink" to={routes.ORG_LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
-                <Link className="navlink" id="home" to={routes.ORG_LANDING}>PAY IT FORWARD</Link>
+                <Link className="navlink" to={routes.LANDING}><img className="logo" alt="logo" src={Logo}></img></Link>
+                <Link className="navlink" id="home" to={routes.LANDING}>PAY IT FORWARD</Link>
             </div>
             <div className="navRight">
                 <div className="styleNavLinks">
-                    <Link className="navlink" to={routes.ORG_LANDING}>Home</Link>
-                    <Link className="navlink" to={routes.ORG_HOME}>Profile</Link>
-                    <Link className="navlink" to={routes.ORG_ACCOUNT}>Account</Link>
+                    <Link className="navlink" to={routes.LANDING}>Home</Link>
+                    <Link className="navlink" to={routes.HOME}>Profile</Link>
+                    <Link className="navlink" to={routes.ACCOUNT}>Account</Link>
                     <SignOutButton />
                 </div>
             </div>
